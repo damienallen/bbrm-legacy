@@ -1,0 +1,132 @@
+<html><!-- InstanceBegin template="/Templates/bbrmtemplate2.dwt" codeOutsideHTMLIsLocked="false" --><head>
+
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>BBRM</title>
+<!-- InstanceEndEditable -->
+<script language="JavaScript">
+<!--
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_swapImgRestore() {//v1.0
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
+  doc.$imgSwaps=null; }
+}
+// -->
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.style2 {
+	color: #CC0000;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style3 {font-size: 16px}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+-->
+</style>
+</head><body onLoad="FP_preloadImgs('images/btn_home_over.gif', 'images/btn_comm_support_over.gif', 'images/btn_join_bbrm_over.gif', 'images/btn_articles_over.gif', 'images/btn_credits.gif', 'images/btn_FHPS_over.gif', 'images/btn_links_over.gif', 'images/btn_mission_over.gif', 'images/btn_credits_over.gif');" topmargin="0" leftmargin="0"> 
+<table width="100%" height="200" cellpadding="0" cellspacing="0" id="table2">
+  <!-- MSTableType="layout" -->
+  <tbody>
+    <tr>
+      <td width="267" rowspan="3" valign="top" bgcolor="#ffffff"><img src="images/graphic_corner.gif" border="0" height="140" width="267"></td>
+      <td colspan="2" background="images/red_gradation.gif" height="10" valign="top"><a href="index.htm"><img border="0" src="images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','../images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="support.htm"><img border="0" src="images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','../images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="join.htm"><img border="0" src="images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','../images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="images/red_gradation.gif" width="31" height="29"></td>
+    </tr>
+    <tr>
+      <td width="639" height="1"></td>
+      <td rowspan="2" align="right" valign="top" bordercolor="#FFFFFF" bgcolor="#ffffff"><img src="images/logo_bbrm.jpg" border="0" height="104" width="133"></td>
+    </tr>
+    <tr>
+      <td bordercolor="#FFFFFF" bgcolor="#ffffff" height="100" valign="top"><img src="images/graphic_mid_logotype.gif" border="0" height="110" width="384"></td>
+    </tr>
+    <tr>
+      <td colspan="3" background="images/green_gradation.gif" height="18" valign="top"><a href="articles.htm"><img src="images/btn_articles.gif" name="img4" width="160" height="18" border="0" id="img4" onMouseOver="FP_swapImg(1,1,/*id*/'img4','../images/btn_articles_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="credits.htm"><img src="images/btn_credits.gif" name="img5" width="66" height="18" border="0" id="img5" onMouseOver="FP_swapImg(1,1,/*id*/'img5','../images/btn_credits_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="FHPS.htm"><img src="images/btn_FHPS.gif" name="img6" width="47" height="18" border="0" id="img6" onMouseOver="FP_swapImg(1,1,/*id*/'img6','../images/btn_FHPS_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="links.htm"><img src="images/btn_links.gif" name="img7" width="47" height="18" border="0" id="img7" onMouseOver="FP_swapImg(1,1,/*id*/'img7','../images/btn_links_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="mission.htm"><img src="images/btn_mission.gif" name="img8" width="92" height="18" border="0" id="img8" onMouseOver="FP_swapImg(1,1,/*id*/'img8','../images/btn_mission_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="forums/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image40','','images/btn_forums_over.gif',1)"><img src="images/btn_forums.gif" name="Image40" width="66" height="18" border="0"></a><a href="http://www.bbrm.org/forums/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('forums','','http://www.bbrm.org/../images/btn_forums_over.gif',1)"></a></td>
+    </tr>
+    <tr>
+      <td valign="top"><img src="images/graphic_feat_all_white.gif" border="0" height="72" width="267"></td>
+      <td height="72" valign="top"><img src="images/graphic_under_curve.gif" border="0" height="54" width="405"></td>
+      <td valign="top"><!-- MSCellType="empty" -->
+        &nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+�
+<!-- InstanceBeginEditable name="EditRegion3" -->
+<p align="center" class="style2">Black Health Crisis:<br>
+  <span class="style3">Words from the Streets </span></p>
+<table width="360" height="220" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#086B08">
+  <tr>
+                              <td><div align="center">
+                                <p class="style1">
+                                  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="360" height="300" title="BBRM Video Player">
+                                    <param name="movie" value="media/BBRMvp.swf">
+                                    <param name="quality" value="high">
+                                    <embed src="media/BBRMvp.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="360" height="300"></embed>
+                                  </object>
+                                </p>
+                                </div></td>
+                            </tr>
+                          </table>
+<p align="center"><a href="http://www.bbrm.org/media/bbrmvid.wmv">Download Hi-Res Version </a></p>
+<!-- InstanceEndEditable -->
+
+
+</body><!-- InstanceEnd --></html>

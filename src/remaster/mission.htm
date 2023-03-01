@@ -1,0 +1,365 @@
+<html>
+
+
+
+<head>
+
+<meta http-equiv="Content-Language" content="en-us">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>BBRM</title>
+
+<script language="JavaScript">
+<!--
+<!--
+
+function FP_swapImg() {//v1.0
+
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+
+}
+
+
+
+function FP_preloadImgs() {//v1.0
+
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+
+}
+
+
+
+function FP_getObjectByID(id,o) {//v1.0
+
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+
+ return null;
+
+}
+
+
+
+function FP_swapImgRestore() {//v1.0
+
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
+
+  doc.$imgSwaps=null; }
+
+}
+
+// -->
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+</head>
+
+
+
+<body onLoad="FP_preloadImgs('images/btn_home_over.gif', 'images/btn_comm_support_over.gif', 'images/btn_join_bbrm_over.gif', 'images/btn_articles_over.gif', 'images/btn_credits_over.gif', 'images/btn_FHPS_over.gif', 'images/btn_links_over.gif', 'images/btn_mission_over.gif');MM_preloadImages('images/btn_forums_over.gif')" topmargin="0" leftmargin="0">
+
+
+
+
+
+	  <td height="148" valign="top">
+
+		<table cellpadding="0" cellspacing="0" width="100%" height="718" id="table2">
+
+			<!-- MSTableType="layout" --><tr>
+
+				<td rowspan="3" valign="top" bgcolor="#FFFFFF">
+
+				<img border="0" src="images/graphic_corner.gif" width="267" height="140"></td>
+
+				<td height="29" colspan="2" valign="top" background="images/red_gradation.gif">
+
+				<a href="index.htm">
+
+				<img border="0" src="images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="support.htm"><img border="0" src="images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="join.htm"><img border="0" src="images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="images/red_gradation.gif" width="31" height="29"></td>
+
+			</tr>
+
+			<tr>
+
+				<td height="1"></td>
+
+				<td rowspan="2" align="right" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+
+				<img border="0" src="images/logo_bbrm.jpg" width="133" height="104"></td>
+
+			</tr>
+
+			<tr>
+
+				<td height="110" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+
+				<img border="0" src="images/graphic_mid_logotype.gif" width="384" height="110"></td>
+
+			</tr>
+
+			<tr>
+
+				<td colspan="3" valign="top" background="images/green_gradation.gif" height="18"><a href="articles.htm"><img src="images/btn_articles.gif" width="160" height="18" border="0" id="img4" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img4','images/btn_articles_over.gif')"></a><a href="credits.htm"><img src="images/btn_credits.gif" width="66" height="18" border="0" id="img5" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img5','images/btn_credits_over.gif')"></a><a href="FHPS.htm"><img src="images/btn_FHPS.gif" width="47" height="18" border="0" id="img6" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img6','images/btn_FHPS_over.gif')"></a><a href="links.htm"><img src="images/btn_links.gif" name="img7" width="47" height="18" border="0" id="img7" onMouseOver="FP_swapImg(1,1,/*id*/'img7','images/btn_links_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="mission.htm"><img src="images/btn_mission.gif" width="92" height="18" border="0" id="img8" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img8','images/btn_mission_over.gif')"></a><a href="forums/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image40','','images/btn_forums_over.gif',1)"><img src="images/btn_forums.gif" name="Image40" width="66" height="18" border="0"></a><a href="http://www.bbrm.org/forums/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('forums','','http://www.bbrm.org/images/btn_forums_over.gif',1)"></a></td>
+
+			</tr>
+
+			<tr>
+
+				<td valign="top">
+
+				<img border="0" src="images/graphic_feat_all_white.gif" width="267" height="72"></td>
+
+				<td valign="top" height="73">
+
+				<img border="0" src="images/graphic_under_curve.gif" width="405" height="54"></td>
+
+				<td valign="top" rowspan="3"><!-- MSCellType="empty" -->&nbsp;</td>
+
+			</tr>
+
+			<tr>
+
+				<td valign="top" rowspan="2">&nbsp;
+
+				</td>
+
+				<td valign="top" align="center" height="40">
+
+				<img border="0" src="images/header_our_mission.gif" width="205" height="27"></td>
+
+			</tr>
+
+			<tr>
+
+				<td valign="top" height="444">
+
+				<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+
+					<!-- MSCellFormattingTableID="2" -->
+
+					<tr>
+
+						<td height="100%" width="100%">
+
+						<!-- MSCellFormattingType="content" -->
+
+						<table border="0" width="100%" height="100%" cellpadding="10" cellspacing="0">
+
+							<tr>
+
+								<td width="100%" height="100%" valign="top">
+
+						<font size="2"><b>The BBRM Mission</b> -<br>
+
+						The Black Biomedical Research Movement was formed for
+
+						the purpose of eliminating our nation�s severe health
+
+						disparity and increasing the pool of minority
+
+						researchers funded by the National Institutes of Health.
+
+						<br>
+
+						Our two-fold mission is:<br>
+
+						(1) To improve health outcomes by aggressively raising
+
+						health <br>
+
+						consciousness in Black Americans; and<br>
+
+						(2) To increase African American involvement in all
+
+						facets of <br>
+
+						National Institutes of Health (NIH) and similarly funded
+
+						biomedical research projects affecting the health of
+
+						Black peoples.<br>
+
+						<br>
+
+						<b>The Philosophy</b> -<br>
+
+						BBRM takes a modern, multidisciplinary and proactive
+
+						approach to solving the myriad health crises affecting
+
+						the Black community. Our hallmark, and what sets BBRM
+
+						apart from other organizations with similar goals, is
+
+						our unique capacity to reach a wide cross-section of
+
+						Black youth through a nontraditional approach to health
+
+						education involving culturally relevant �edutainment�.<br>
+
+						<br>
+
+						Our innovative marketing strategies are linked to
+
+						popular, youth-oriented events such as professional
+
+						sports, comedy, dance and music, including reggae,
+
+						hip-hop and rhythm and blues. The BBRM Cultural Health
+
+						Symposia are potent social catalysts for both personal
+
+						and community health-enhancing changes in attitude and
+
+						behavior. Our unique ethnically-appropriate health
+
+						education strategies have a profound impact on
+
+						transforming the health-related attitudes and practices
+
+						of Black people. Our philosophy is that only by
+
+						empowering cultural groups with concrete knowledge and
+
+						effective tools for behavioral change that are relevant
+
+						to their own lives will the huge ethnic and economic
+
+						disparities in health in the United States disappear.<br>
+
+						<br>
+
+						<b>The Goals</b> -<br>
+
+						The primary goals of the BBRM are to:<br>
+
+						� Improve health attitudes, knowledge, and behavior in
+
+						African Americans, especially Black young adults, with
+
+						area-specific designs to efficiently deliver relevant
+
+						high-impacting health messages to the people in that
+
+						area.<br>
+
+						� Develop original and inspiring, culturally-relevant
+
+						health education materials for people attending our
+
+						health workshops, symposia, and tutorial programs.<br>
+
+						� Increase the participation of Black people in
+
+						biomedical research in the United States by recruiting
+
+						top-level Black college students in the sciences, and
+
+						procuring sufficient sources of funding for their
+
+						graduate training in biomedical programs at major
+
+						universities.<br>
+
+						� Increase the participation of African Americans
+
+						involved in all levels of biomedical research, including
+
+						participation as research subjects and <br>
+
+						become advocates for more federal dollars for biomedical
+
+						research. </font></td>
+
+							</tr>
+
+						</table>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td width="267"></td>
+
+				<td width="100%"></td>
+
+				<td width="139" height="3"></td>
+
+		  </tr>
+
+			<tr>
+
+				<td><img alt="" width="267" height="1" src="images/MsSpacer.gif"></td>
+
+				<td></td>
+
+				<td><img alt="" width="139" height="1" src="images/MsSpacer.gif"></td>
+
+			</tr>
+
+		</table></td>
+
+  </tr>
+
+	<tr>
+
+	  <td height="900">&nbsp;</td>
+
+	</tr>
+
+</body>
+
+
+
+</html>
+
