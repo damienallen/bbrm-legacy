@@ -2,3 +2,67 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.nav {
+    width: 100%;
+}
+
+.nav img {
+    display: block;
+}
+
+.nav a:link { text-decoration: none; }
+.nav a:visited { text-decoration: none; }
+.nav a:hover { text-decoration: none; }
+.nav a:active { text-decoration: none; }
+
+.primary-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.primary-links {
+    /* height: 29px; */
+    display: flex;
+}
+
+.gradation {
+    background: url(../images/red_gradation.gif) repeat-x;
+    flex: 1;
+}
+
+.graphic-corner {
+    flex: 0;
+}
+
+.graphic-mid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-fill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary-nav {
+    background: url(../images/green_gradation.gif) repeat-x;
+    height: 18px;
+    display: flex;
+}
+
+.nav-under {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.page-content {
+    margin-left: 267px;
+    font-size: 12px;
+}
+
+.page-content p {
+    line-height: 12.5pt;
+}
