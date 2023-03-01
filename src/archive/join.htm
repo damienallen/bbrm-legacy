@@ -1,0 +1,430 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>BBRM</title>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_swapImgRestore() {//v1.0
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
+  doc.$imgSwaps=null; }
+}
+
+
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   alert("Invalid E-mail ID")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Invalid E-mail ID")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("Invalid E-mail ID")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+
+		 if (str.indexOf(" ")!=-1){
+		    alert("Invalid E-mail Address.")
+		    return false
+		 }
+
+ 		 return true
+	}
+
+function ValidateForm(){
+	var emailID=document.forms[1].email;
+
+    if (document.forms[1].firstName.value == "")
+    {
+		alert("First Name is required.");
+		document.forms[1].firstName.focus();
+		return false;
+    }
+
+    if (document.forms[1].lastName.value == "")
+    {
+		alert("Last Name is required.");
+		document.forms[1].lastName.focus();
+		return false;
+    }
+	
+	if (document.forms[1].emailID.value == "" && document.forms[1].address12.value == "")
+    {
+		alert("An email OR mailing address is required.");
+		document.forms[1].lastName.focus();
+		return false;
+    }
+
+	if ((emailID.value==null)||(emailID.value=="")){
+		alert("Please Enter your Email Address")
+		emailID.focus()
+		return false;
+	}
+	if (echeck(emailID.value)==false){
+		emailID.value=""
+		emailID.focus()
+		return false;
+	}
+
+	return true;
+
+ }
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onLoad="FP_preloadImgs(/*url*/'images/btn_home_over.gif', /*url*/'images/btn_comm_support_over.gif', /*url*/'images/btn_join_bbrm_over.gif', /*url*/'images/btn_articles_over.gif', /*url*/'images/btn_credits_over.gif', /*url*/'images/btn_FHPS_over.gif', /*url*/'images/btn_links_over.gif', /*url*/'images/btn_mission_over.gif');MM_preloadImages('http://www.bbrm.org/images/btn_forums_over.gif')" topmargin="0" leftmargin="0">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" id="table2">
+			<tr>
+				<td rowspan="3" width="267" valign="top" bgcolor="#FFFFFF">
+				<img border="0" src="images/graphic_corner.gif" width="267" height="140"></td>
+				<td height="29" colspan="3" valign="top" background="images/red_gradation.gif">
+				<a href="index.htm">
+				<img border="0" src="images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="support.htm"><img border="0" src="images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="join.htm"><img border="0" src="images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="images/red_gradation.gif" width="31" height="29"></td>
+			</tr>
+			<tr>
+				<td colspan="2"></td>
+				<td width="672" colspan="2" rowspan="2" align="right" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+				<img border="0" src="images/logo_bbrm.jpg" width="133" height="104"></td>
+			</tr>
+			<tr>
+				<td height="110" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF" colspan="4">
+				<img border="0" src="images/graphic_mid_logotype.gif" width="384" height="110"></td>
+			</tr>
+			<tr>
+				<td colspan="4" valign="top" background="images/green_gradation.gif" height="18">
+				<a href="articles.htm">
+				<img src="images/btn_articles.gif" width="160" height="18" border="0" id="img4" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img4','images/btn_articles_over.gif')"></a><a href="credits.htm"><img src="images/btn_credits.gif" width="66" height="18" border="0" id="img5" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img5','images/btn_credits_over.gif')"></a><a href="FHPS.htm"><img src="images/btn_FHPS.gif" width="47" height="18" border="0" id="img6" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img6','images/btn_FHPS_over.gif')"></a><a href="links.htm"><img src="images/btn_links.gif" width="47" height="18" border="0" id="img7" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img7','images/btn_links_over.gif')"></a><a href="mission.htm"><img src="images/btn_mission.gif" width="92" height="18" border="0" id="img8" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img8','images/btn_mission_over.gif')"></a><a href="http://www.bbrm.org/forums/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('forums','','http://www.bbrm.org/images/btn_forums_over.gif',1)"><img src="http://www.bbrm.org/images/btn_forums.gif" name="forums" width="66" height="18" border="0" id="forums" /></a></td>
+			</tr>
+			<tr>
+				<td valign="top">
+				<img border="0" src="images/graphic_feat_all_white.gif" width="267" height="72"></td>
+				<td valign="top" height="73" colspan="3">
+				<img border="0" src="images/graphic_under_curve.gif" width="405" height="54"></td>
+
+			</tr>
+		</table>
+
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+					<td>&nbsp;</td>
+					<td>
+	<form action="http://www.cufund.org/giveonline/cart.php" method="post">
+				<input type="hidden" name="action" value="add">
+				<input type="hidden" name="prodID" value="235">
+				<input type="hidden" name="amount" value="12">
+				<input type="image" width="205" height="39" src="http://www.alesce.com/cufund_temp/button_1.jpg" alt="Give Online">
+</form></td></tr></table>
+
+
+
+<form action="formmail.php" method="POST">
+  <p>
+  <input type="hidden" name="recipients" value="blackhealth@bbrm.org">
+  <input type="hidden" name="good_url" value="http://www.bbrm.org/success.php">
+  <input type="hidden" name="subject" value="BBRM Member Info">
+  <input type="hidden" name="conditions1" value=":@@TEST@firstName&lastName@You must provide first and last names.@">
+  <input type="hidden" name="conditions2" value=":@@TEST@email|address1@You must provide an email address AND/OR a mailing address.@">
+  <input type="hidden" name="conditions3" value=":@@TEST@email@You must enter a valid email address.@:"/>
+  <input type="hidden" name="conditions4" value=":@@TEST@phone@You must provide a phone number.@">
+  <input type="hidden" name="conditions5" value=":@@TEST@state@You must provide a state.@">
+  <input type="hidden" name="conditions6" value=":@@TEST@zip@You must provide a valid zip code.@">
+  <input type="hidden" name="csvfile" value="data.csv">
+  <input type="hidden" name="csvcolumns" value="firstName,lastName,email,phone,address1,city,state,zip,additionalInformation,profession,sex,age,education,income,health,food,exercise,healthDoctor">
+  </p>
+   <table width="230" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+       <td width="58"><p>&nbsp;</p>
+         <table width="578" border="0" cellpadding="0" cellspacing="0">
+           <tr>
+             <td width="350" height="35" valign="middle" bgcolor="#086B08"><p><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1">First Name</font></strong><br>
+                       <br>
+             </font></p></td>
+             <td width="228" valign="middle" bgcolor="#086B08"><input name="firstName" type="text" size="20"></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#FFFFFF"><p><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font>Last Name</strong></font><br>
+             </p>             </td>
+             <td bgcolor="#FFFFFF"><input name="lastName" type="text" size="20">
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#FFFFFF" size="2"><strong>E-mail</strong></font><br>
+             </p>             </td>
+             <td bgcolor="#086B08"><input name="email" type="text" value="" size="20">
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" valign="middle" bgcolor="#FFFFFF"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong>Phone Number</font><br>
+             </strong></p>             </td>
+             <td bgcolor="#FFFFFF"><input name="phone" type="text" value="" size="20">
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#FFFFFF" size="2">Mailing Address</font><br>
+             </strong></p>             </td>
+             <td bgcolor="#086B08"><input name="address1" type="text" value="" size="20">
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#FFFFFF"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong>City</font></strong></p></td>
+             <td bgcolor="#FFFFFF"><input name="city" type="text" id="city" value="" size="20"></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong><font color="#FFFFFF">State</font></font><br>
+             </strong></p>             </td>
+             <td bgcolor="#086B08"><select name="state">
+			 	<option value="" selected>[Select One]</option>
+                <option value="AL">Alabama
+                <option value="AK">Alaska
+                <option value="AZ">Arizona
+                <option value="AR">Arkansas
+                <option value="CA">California
+                <option value="CO">Colorado
+                <option value="CT">Connecticut
+                <option value="DE">Delaware
+                <option value="DC">District of Columbia
+                <option value="FL">Florida
+                <option value="GA">Georgia
+                <option value="HI">Hawaii
+                <option value="ID">Idaho
+                <option value="IL">Illinois
+                <option value="IN">Indiana
+                <option value="IA">Iowa
+                <option value="KS">Kansas
+                <option value="KY">Kentucky
+                <option value="LA">Louisiana
+                <option value="ME">Maine
+                <option value="MD">Maryland
+                <option value="MA">Massachusetts
+                <option value="MI">Michigan
+                <option value="MN">Minnesota
+                <option value="MS">Mississippi
+                <option value="MO">Missouri
+                <option value="MT">Montana
+                <option value="NE">Nebraska
+                <option value="NV">Nevada
+                <option value="NH">New Hampshire
+                <option value="NJ">New Jersey
+                <option value="NM">New Mexico
+                <option value="NY">New York
+                <option value="NC">North Carolina
+                <option value="ND">North Dakota
+                <option value="OH">Ohio
+                <option value="OK">Oklahoma
+                <option value="OR">Oregon
+                <option value="PA">Pennsylvania
+                <option value="RI">Rhode Island
+                <option value="SC">South Carolina
+                <option value="SD">South Dakota
+                <option value="TN">Tennessee
+                <option value="TX">Texas
+                <option value="UT">Utah
+                <option value="VT">Vermont
+                <option value="VA">Virginia
+                <option value="WA">Washington
+                <option value="WV">West Virginia
+                <option value="WI">Wisconsin
+                <option value="WY">Wyoming
+                </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#FFFFFF"><p><strong> <font size="2"><strong><font color="#000000"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#000000" size="2">Zip Code</font><br>
+             </strong></p>             </td>
+             <td><input name="zip" type="text" value="" size="20">
+             <br></td>
+           </tr>
+           <tr>
+             <td bgcolor="#086B08"><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="red" size="2">Additional Information</font></strong></td>
+             <td bgcolor="#086B08"><textarea name="additionalInformation" cols="27" rows="5"></textarea></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#FFFFFF"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#FFFFFF" size="2">Profession</font><br>
+             </strong></p>             </td>
+             <td><input name="profession" type="text" value=""></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong><font color="#FFFFFF">Sex</font></font></strong></p>             </td>
+             <td bgcolor="#086B08"><font color="#FFFFFF">
+              <input type="radio" name="sex" value="male">
+                <font face="Verdana" size="2">Male</font></font><font color="#FFFFFF" face="Verdana">
+                <input type="radio" name="sex" value="female">
+                 </font><font color="#FFFFFF" size="2" face="Verdana">Female</font><br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#FFFFFF"><p><strong><font size="2"><strong><font color="#000000"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#000000" size="2">Age</font><br>
+             </strong></p>             </td>
+             <td valign="middle"><select name="age" style="width: 185px;">
+				 <option value="" selected>[Select One]</option>
+                 <option value="<18 yrs"><18 yrs</option>
+                 <option value="19-25 yrs">19-25 yrs</option>
+                 <option value="26-35 yrs">26-35 yrs</option>
+                 <option value="36-45 yrs">36-45 yrs</option>
+                 <option value="46-65 yrs">46-65 yrs</option>
+                 <option value="66- over">66- over</option>
+               </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong><font color="#FFFFFF">Education Level</font></font><br>
+             </strong></p>             </td>
+             <td bgcolor="#086B08"><select name="education" style="width: 185px;">
+			 	 <option value="" selected>[Select One]</option>
+                 <option value="High School">High School</option>
+                 <option value="Some College">Some College</option>
+                 <option value="College Graduate">College Graduate</option>
+                 <option value="Graduate School/ M.S.">Graduate School/ M.S.</option>
+                 <option value="Ph.D., M.D., D.D.S">Ph.D., M.D., D.D.S</option>
+                 <option value="Other degrees/ certificates">Other degrees/ certificates</option>
+                 <option value="Self Educated">Self Educated</option>
+               </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#000000" size="2">Annual Income</font></strong></p>             </td>
+             <td><select name="income" style="width: 185px;">
+			 	 <option value="" selected>[Select One]</option>
+                 <option value="below $12,000">below $12,000</option>
+                 <option value="$12,000-$20,000">$12,000-$20,000</option>
+                 <option value="$20,000-$30,000">$20,000-$30,000</option>
+                 <option value="$30,000-$50,000">$30,000-$50,000</option>
+                 <option value="$50,000-$90,000">$50,000-$90,000</option>
+                 <option value="over $100,000">over $100,000</option>
+               </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><strong><font size="2"><strong><img src="images/MsSpacer.gif" width="10" height="1"></strong><font color="#FFFFFF">My biggest health concern is:</font></font></strong></p>             </td>
+             <td bgcolor="#086B08"><select name="health" style="width: 185px;">
+				 <option value="" selected>[Select One]</option>
+                 <option value="Obesity">Obesity</option>
+                 <option value="Diabetes">Diabetes</option>
+                 <option value="High blood pressure">High blood pressure</option>
+                 <option value="Heart Disease">Heart Disease</option>
+                 <option value="Cancer">Cancer</option>
+               </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35"><p><strong><font size="2"><strong><font color="#000000"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#000000" size="2">I eat fresh vegetables and fruits from the grocery store</font></strong></p>             </td>
+             <td><select name="food" style="width: 185px;">
+			 	 <option value="" selected>[Select One]</option>
+                 <option value="Always/Every day">Always/Every day</option>
+                 <option value="Mostly/Every day">Mostly/Every day</option>
+                 <option value="Sometimes/Once a week">Sometimes/Once a week</option>
+                 <option value="Rarely/Once a month">Rarely/Once a month</option>
+                 <option value="Never">Never</option>
+               </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35" bgcolor="#086B08"><p><strong><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong><font color="#FFFFFF">I exercise vigorously for at least 45 minutes</font></font></strong></p>             </td>
+             <td bgcolor="#086B08"><select name="exercise" style="width: 185px;">
+			 	 <option value="" selected>[Select One]</option>
+                 <option value="Every day">Every day</option>
+                 <option value="Every other day">Every other day</option>
+                 <option value="Every weekend">Every weekend</option>
+                 <option value="Every other weekend">Every other weekend</option>
+                 <option value="Once each month">Once each month</option>
+                 <option value="Pretty much never">Pretty much never</option>
+               </select>
+             <br></td>
+           </tr>
+           <tr>
+             <td height="35"><p><strong><font size="2"><strong><font color="#000000"><img src="images/MsSpacer.gif" width="10" height="1"></font></strong></font><font color="#000000" size="2">Each year I see a doctor/health professional at least</font></strong></p>             </td>
+             <td><select name="healthDoctor" style="width: 185px;">
+			 	 <option value="" selected>[Select One]</option>
+                 <option value="0-10 Times">0-10 Times</option>
+                 <option value="11-20 Time">11-20 Times</option>
+                 <option value="More than 21 Times">More than 21 Times</option>
+                            </select>
+             <br></td>
+           </tr>
+         </table></td>
+     </tr>
+   </table>
+   <p><font size="2"><strong><font color="#FFFFFF"><img src="images/MsSpacer.gif" width="150" height="1"></font></strong></font>
+     <input type="submit" value="Submit"></p>
+</form>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-509730-1";
+urchinTracker();
+</script>
+</body>
+
+</html>
