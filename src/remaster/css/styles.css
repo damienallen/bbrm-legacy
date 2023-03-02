@@ -23,7 +23,7 @@ body {
 }
 
 .primary-links {
-    /* height: 29px; */
+    height: 29px;
     display: flex;
 }
 
@@ -37,6 +37,7 @@ body {
 }
 
 .graphic-mid {
+    height: 111px;
     display: flex;
     justify-content: space-between;
 }
@@ -45,24 +46,29 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .secondary-nav {
     background: url(../images/green_gradation.gif) repeat-x;
-    height: 18px;
     display: flex;
 }
 
 .nav-under {
     display: flex;
-    margin-bottom: 24px;
 }
 
 .page-content {
-    margin-left: 267px;
+    margin: 55px 0 0 278px;
     font-size: 12px;
 }
 
 .page-content p {
     line-height: 12.5pt;
+}
+
+.divider {
+    margin: 20px 0;
+    width: 250px;
+    border-bottom: 1px solid #000;
 }
