@@ -11,10 +11,22 @@ body {
     display: block;
 }
 
-.nav a:link { text-decoration: none; }
-.nav a:visited { text-decoration: none; }
-.nav a:hover { text-decoration: none; }
-.nav a:active { text-decoration: none; }
+.nav a:link,
+.nav a:visited,
+.nav a:hover,
+.nav a:active {
+    text-decoration: none;
+}
+
+.nav a img.over,
+.nav a:hover img.default {
+    display: none;
+}
+
+.nav a img.default,
+.nav a:hover img.over {
+    display: inherit;
+}
 
 .primary-nav {
     width: 100%;
@@ -27,12 +39,21 @@ body {
     display: flex;
 }
 
+.secondary-links {
+    display: flex;
+}
+
+.articles-link {
+    width: 158px;
+}
+
 .gradation {
     background: url(../images/red_gradation.gif) repeat-x;
     flex: 1;
 }
 
 .graphic-corner {
+    height: 140px;
     flex: 0;
 }
 
