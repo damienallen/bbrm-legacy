@@ -93,3 +93,19 @@ body {
     width: 250px;
     border-bottom: 1px solid #000;
 }
+
+/* Join page */
+
+.join-form {
+    margin-bottom: 100px;
+    max-width: 580px;
+}
+
+.form-row {
+    background: #086B08;
+    display: flex;
+}
+
+.alt {
+    background: none;
+}
