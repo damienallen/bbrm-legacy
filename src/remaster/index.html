@@ -1,0 +1,425 @@
+<html>
+
+<head>
+
+<meta http-equiv="Content-Language" content="en-us">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>BBRM</title>
+
+
+<script language="JavaScript">
+<!--
+<!--
+
+function FP_swapImg() {//v1.0
+
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+
+}
+
+
+
+function FP_preloadImgs() {//v1.0
+
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+
+}
+
+
+
+function FP_getObjectByID(id,o) {//v1.0
+
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+
+ return null;
+
+}
+
+
+
+function FP_swapImgRestore() {//v1.0
+
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
+
+  doc.$imgSwaps=null; }
+
+}
+
+// -->
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+
+<script type="text/javascript" src="js/motiongallery.js">
+
+/***********************************************
+* CMotion Image Gallery- Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+</script>
+
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/gallerystyle.css" />
+
+<style type="text/css">
+<!--
+.style3 {font-size: 14px}
+.style4 {
+	color: #333333;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style7 {font-size: 12px}
+-->
+</style>
+</head>
+
+
+
+<body onLoad="FP_preloadImgs('images/btn_home_over.gif', 'images/btn_comm_support_over.gif', 'images/btn_join_bbrm_over.gif', 'images/btn_articles_over.gif', 'images/btn_credits_over.gif', 'images/btn_FHPS_over.gif', 'images/btn_links_over.gif', 'images/btn_mission_over.gif')" topmargin="0" leftmargin="0">
+
+
+
+
+
+	  <td height="148" valign="top">
+
+		<table cellpadding="0" cellspacing="0" width="100%" height="792" id="table2">
+
+			<!-- MSTableType="layout" --><tr>
+
+				<td rowspan="3" valign="top" bgcolor="#FFFFFF" colspan="2">
+
+				<img border="0" src="images/graphic_corner.gif" width="267" height="140"></td>
+
+				<td height="29" colspan="2" valign="top" background="images/red_gradation.gif">
+
+				<a href="index.html">
+
+				<img border="0" src="images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="support.html"><img border="0" src="images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="join.html"><img border="0" src="images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="images/red_gradation.gif" width="31" height="29"></td>
+
+			</tr>
+
+			<tr>
+
+				<td height="1"></td>
+
+				<td rowspan="2" align="right" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+
+				<img border="0" src="images/logo_bbrm.jpg" width="133" height="104"></td>
+			</tr>
+
+			<tr>
+
+				<td height="110" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+
+				<img border="0" src="images/graphic_mid_logotype.gif" width="384" height="110"></td>
+			</tr>
+
+			<tr>
+
+				<td colspan="4" valign="top" background="images/green_gradation.gif" height="18">
+
+				<a href="articles.html">
+
+				<img src="images/btn_articles.gif" width="160" height="18" border="0" id="img4" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img4','images/btn_articles_over.gif')"></a><a href="credits.html"><img src="images/btn_credits.gif" width="66" height="18" border="0" id="img5" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img5','images/btn_credits_over.gif')"></a><a href="FHPS.html"><img src="images/btn_FHPS.gif" width="47" height="18" border="0" id="img6" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img6','images/btn_FHPS_over.gif')"></a><a href="links.html"><img src="images/btn_links.gif" name="img7" width="47" height="18" border="0" id="img7" onMouseOver="FP_swapImg(1,1,/*id*/'img7','images/btn_links_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="mission.html"><img src="images/btn_mission.gif" width="92" height="18" border="0" id="img8" onMouseOut="FP_swapImgRestore()" onMouseOver="FP_swapImg(1,1,/*id*/'img8','images/btn_mission_over.gif')"></a></td>
+			</tr>
+
+			<tr>
+
+				<td height="72" colspan="2" valign="top">
+
+				<img border="0" src="images/graphic_featured.gif" width="267" height="72"></td>
+
+				<td valign="top" >
+
+				<img border="0" src="images/graphic_under_curve.gif" width="405" height="54"></td>
+
+				<td width="148" valign="top">&nbsp;</td>
+			</tr>
+
+			<tr>
+
+				<td valign="top" background="images/feat_artcl_bkgrd.gif" rowspan="4" width="235">
+
+				<table cellpadding="0" cellspacing="0" width="235" height="487">
+
+					<!-- MSCellFormattingTableID="1" -->
+
+					<tr>
+
+						<td width="7">
+
+						<img alt="" width="7" height="1" src="images/MsSpacer.gif"></td>
+
+						<td height="487" width="228">
+
+						<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+
+							<tr>
+
+								<td valign="top" background="images/feat_artcl_bkgrd.gif" height="100%" width="100%">
+
+								  <p>
+								    <!-- MSCellFormattingType="content" -->
+                                    <span class="style7">At age 86 Morjorie Newlin is an inspiration to
+anyone at any age. Morjorie was born in the US, but
+raised in the culture and lifestyle of her mother, an im-
+migrant from Barbados..</span></p>
+                                    <p>Read more: <a href="articles/morjorie.pdf"><strong>The BBRM Introduces Morjorie Newlin</strong></a><br>
+								  </p> 
+								    <p><span class="style7">There's no need to stretch the truth about stretching...check out the  rewards of treating yourself to just fifteen minutes of stretching  every other day.</span></p>
+								  <p>Read more: <a href="articles/bbrm e-article stretch.pdf"><strong>Stretch Your Potential </strong></a><br>
+								  </p>
+								  <p><span class="style7">Most of us are not aware of the negative impact on both physical and  mental health caused by being chronically mildly dehydrated.&nbsp; This state  of dehydration decreases both mental and physical performance by a  drastic 20%!<br>
+								  </span><br>
+							        <span class="style3">Read more:</span> <a href="articles/water1.html"><strong>The Wealth of Water<br>
+						            </strong></a>(<span class="style7">Printer friendly:</span> <a href="articles/water.pdf">page 1</a>, <a href="articles/water2.pdf">page 2</a>) </p>
+							  </td>
+							</tr>
+						</table></td>
+					</tr>
+				</table>				</td>
+
+				<td>&nbsp;</td>
+
+				<td valign="top" align="center" height="40">
+
+				<img border="0" src="images/header_what_is.gif" width="342" height="28"></td>
+			    <td width="148" valign="top">&nbsp;</td>
+			</tr>
+
+			<tr>
+
+				<td>&nbsp;</td>
+
+				<td valign="top" height="274">
+
+				<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+
+					<!-- MSCellFormattingTableID="2" -->
+
+					<tr>
+
+					  <td height="100%" width="100%">
+
+						<!-- MSCellFormattingType="content" -->
+
+						<table border="0" width="100%" height="100%" cellpadding="10" cellspacing="0">
+
+							<tr>
+
+								<td width="100%" height="50%" valign="top">
+
+						<p align="center" class="MsoNormal"><strong>BBRM is a tax-exempt charitable organization under the <br>
+					    provision of
+						  Section 501(c)(3) of the Internal Revenue Code. </strong></p>
+						<p class="MsoNormal"><font size="2">BBRM means concern
+						  
+						  for the health of Black people.&nbsp; We reach out to those
+						  
+						  who suffer the brunt of many health
+						  
+						  disparities&#8212;diabetes, hypertension and prostate cancer
+						  
+						  to name a few.&nbsp; We bring knowledge about health issues
+						  
+						  to the attention of the public.</font></p>
+						<p class="MsoNormal"><font size="2">Our African American
+
+						Cultural Health Symposiums gather big entertainers
+
+						together with the Black community to create
+
+						<span style="color: #CC0000"><b>health awareness</b></span>,
+
+						highlight <span style="color: #008000"><b>health promotion</b></span>,
+
+						and to encourage <span style="color: #FF9900"><b>health literacy</b></span>, maintaining our position in <strong>health advocacy</strong>.</font></p>
+
+						<p class="MsoNormal"><font size="2">Since 1997, we have
+
+						been cultivating interest, concern and responsibility
+
+						for health in the Black community.&nbsp; At BBRM we aim to
+
+						improve the health of Black Americans by insisting that we be as conscious of our health as we are of our
+
+						history.</font></p>
+
+						<p class="MsoNormal"><font size="2">&nbsp;</font><u><font size="2"><a href="join.html">Join BBRM</a></font></u><font size="2">
+
+						to become an aware advocate of your own health and to contribute to the movement with your time or
+
+						financial support.</font> </p>
+						</td>
+							</tr>
+							<tr>
+							  <td height="50%" align="center" valign="top"><div style="overflow:hidden">
+				<div id="motioncontainer" style="position:relative;width:400px;height:90px;overflow:hidden;"> <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
+						<nobr id="trueContainer">
+						
+						<a href="images/slideshow/001.jpg" rel="lightbox[BBRM]" title="BBRM talks with Channel 12 TV">
+						<img src="images/slideshow/thumbs/001.jpg" border=1></a>
+						
+						<a href="images/slideshow/002.jpg" rel="lightbox[BBRM]" title="Dr. Allen joins an online chat on AIDS in Jamacia">
+						<img src="images/slideshow/thumbs/002.jpg" border=1></a>
+						
+						<a href="images/slideshow/003.jpg" rel="lightbox[BBRM]" title="Sandra Rose on AIDS">
+						<img src="images/slideshow/thumbs/003.jpg" border=1></a>
+						
+						<a href="images/slideshow/004.jpg" rel="lightbox[BBRM]" title="Concrete Streets - Imani before performing">
+						<img src="images/slideshow/thumbs/004.jpg" border=1></a>
+						
+						<a href="images/slideshow/005.jpg" rel="lightbox[BBRM]" title="Shreen McKenzy takes BBRM to Bob Marley Culture Yard">
+						<img src="images/slideshow/thumbs/005.jpg" border=1></a>
+						
+						<a href="images/slideshow/006.jpg" rel="lightbox[BBRM]" title="Jamacian artist Healthy Wealthy">
+						<img src="images/slideshow/thumbs/006.jpg" border=1></a>
+						
+						<a href="images/slideshow/007.jpg" rel="lightbox[BBRM]" title="D-Block backstage at BBRM event in Boulder CO">
+						<img src="images/slideshow/thumbs/007.jpg" border=1></a>
+						
+						<a href="images/slideshow/008.jpg" rel="lightbox[BBRM]" title="BBRM talks with Jamacian police official">
+						<img src="images/slideshow/thumbs/008.jpg" border=1></a>
+						
+						<a href="images/slideshow/009.jpg" rel="lightbox[BBRM]" title="Shocking Vibes - Clide McKenzy talks health with BBRM">
+						<img src="images/slideshow/thumbs/009.jpg" border=1></a>
+						
+						<a href="images/slideshow/010.jpg" rel="lightbox[BBRM]" title="Medical students from AMSA listen to Dr. Patrick Allen at annual conference">
+						<img src="images/slideshow/thumbs/010.jpg" border=1></a>
+						
+						<a href="images/slideshow/011.jpg" rel="lightbox[BBRM]" title="Black Health Symposium at Boulder CO">
+						<img src="images/slideshow/thumbs/011.jpg" border=1></a>
+						
+						<a href="images/slideshow/012.jpg" rel="lightbox[BBRM]" title="Health official from the Colorado Dept. of Public Health and Environment">
+						<img src="images/slideshow/thumbs/012.jpg" border=1></a>
+						
+						<a href="images/slideshow/013.jpg" rel="lightbox[BBRM]" title="Poet Inite at BBRM symposium">
+						<img src="images/slideshow/thumbs/013.jpg" border=1></a>
+						
+						<a href="images/slideshow/014.jpg" rel="lightbox[BBRM]" title="Rapper Styles P. listens to black health lecture">
+						<img src="images/slideshow/thumbs/014.jpg" border=1></a>
+						
+						<a href="images/slideshow/015.jpg" rel="lightbox[BBRM]" title="BET comedian John Lassiter entertains BBRM symposium participants">
+						<img src="images/slideshow/thumbs/015.jpg" border=1></a>
+						
+						<a href="images/slideshow/016.jpg" rel="lightbox[BBRM]" title="Musicians putting lyrics on black health to music">
+						<img src="images/slideshow/thumbs/016.jpg" border=1></a>
+						
+						<a href="images/slideshow/017.jpg" rel="lightbox[BBRM]" title="Concrete Streets interview at University of Colorado">
+						<img src="images/slideshow/thumbs/017.jpg" border=1></a>
+						
+						<a href="images/slideshow/018.jpg" rel="lightbox[BBRM]" title="Dr. Patrick Allen talks with Jamacian prison official about nutrition">
+						<img src="images/slideshow/thumbs/018.jpg" border=1></a>
+						
+						<a href="images/slideshow/019.jpg" rel="lightbox[BBRM]" title="Nighttime entertainment at BBRM symposium">
+						<img src="images/slideshow/thumbs/019.jpg" border=1></a>
+						
+						<a href="images/slideshow/020.jpg" rel="lightbox[BBRM]" title="BBRM Members backstage - Marcus and Eric">
+						<img src="images/slideshow/thumbs/020.jpg" border=1></a>					  </nobr>	</div>	</td>
+						  </tr>
+						</table>					  </td>
+					</tr>
+				</table>				</td>
+			    <td width="148" align="center" valign="top"><div align="center">
+			      <p style="background-color:#BBBBBB"><br>
+			        <a href="promovid.html"><img src="images/newvid.jpg" width="124" height="84" border="0"></a><br>  
+		          <a href="promovid.html"><span class="style4">View BBRM Video Clip</span></a><br></p>
+			      <p><br>
+			        <br>
+		          </p>
+		      </div></td>
+			</tr>
+
+			<tr>
+
+				<td>&nbsp;</td>
+
+				<td height="213" align="center">		    </td>
+			    <td width="148" valign="top">&nbsp;</td>
+			</tr>
+
+			<tr>
+
+				<td width="32"></td>
+
+				<td width="618"></td>
+
+				<td height="3"></td>
+			</tr>
+
+			<tr>
+
+				<td><img alt="" width="235" height="1" src="images/MsSpacer.gif"></td>
+
+				<td><img alt="" width="32" height="1" src="images/MsSpacer.gif"></td>
+
+				<td></td>
+
+				<td><img alt="" width="139" height="1" src="images/MsSpacer.gif"></td>
+			</tr>
+		</table></td>
+
+  </tr>
+
+	<tr>
+
+	  <td height="900">&nbsp;</td>
+
+	</tr>
+
+</body>
+
+
+
+</html>
+
