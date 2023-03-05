@@ -52,22 +52,29 @@ body {
     flex: 1;
 }
 
-.graphic-corner {
+.banner-left {
     height: 140px;
     flex: 0;
 }
 
-.graphic-mid {
+.banner-right {
+    width: 384px;
     height: 111px;
+}
+
+.graphic-mid {
     display: flex;
     justify-content: space-between;
+}
+
+.logo {
+    margin-right: 8px;
 }
 
 .nav-fill {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .secondary-nav {
