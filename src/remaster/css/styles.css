@@ -10,7 +10,7 @@ body {
   font-size: 18px;
   line-height: calc(1ex / 0.32);
 
-  margin: 64px 64px 64px 278px;
+  margin: 32px 64px 64px 278px;
   max-width: 100%;
   width: 70ch;
 }
@@ -49,13 +49,19 @@ li {
 }
 
 section {
-  padding: 24px 0;
+  padding: 1.2em 0;
 }
 
 .divider {
   margin: 32px 0;
   width: 250px;
   border-bottom: 1px solid #000;
+}
+
+/* Links page */
+.links-content {
+  font-size: 0.9em;
+  line-height: normal;
 }
 
 /* Join page */
