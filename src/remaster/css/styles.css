@@ -1,5 +1,14 @@
 /* Global */
 
+@font-face {
+  font-family: "ExtendedBlack";
+  src: url("fonts/ExtendedBlack.woff2") format("woff2"),
+    url("fonts/ExtendedBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -40,6 +49,12 @@ li {
 }
 
 .page-header {
+  font-family: "ExtendedBlack", "Helvetica", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
+  font-weight: 900;
+  color: #dd312f;
+
   text-align: center;
   margin-bottom: 24px;
 }
@@ -52,10 +67,24 @@ section {
   padding: 1.2em 0;
 }
 
+.note {
+  font-size: 0.9em;
+  color: #666;
+
+  text-align: center;
+  margin-bottom: 32px;
+}
+
 .divider {
   margin: 32px 0;
   width: 250px;
   border-bottom: 1px solid #000;
+}
+
+/* Articles page */
+.articles-list li {
+  padding: 16px 0;
+  list-style: none;
 }
 
 /* FHPS page */
@@ -85,16 +114,39 @@ section {
 
 .join-form {
   margin-bottom: 100px;
-  max-width: 580px;
+  max-width: 640px;
+  font-size: 0.9em;
 }
 
 .form-row {
   background: #086b08;
+  color: #ffffff;
+  padding: 4px 8px;
+
   display: flex;
+  justify-content: space-between;
 }
 
 .alt {
   background: none;
+  color: #000000;
+}
+
+.form-control {
+  flex: 0 1 220px;
+}
+
+.form-input {
+  width: 204px;
+}
+
+.form-select {
+  width: 212px;
+}
+
+.submit-button {
+  text-align: center;
+  margin-top: 32px;
 }
 
 /* Navigation */

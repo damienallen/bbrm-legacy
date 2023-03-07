@@ -94,161 +94,58 @@
     </div>
 
     <div class="page-content">
+      <div class="note">
+        This form serves as a historical reference and is no longer active.
+      </div>
+
       <div class="form">
         <form class="join-form">
           <div class="form-row">
             <div class="label">First Name</div>
-            <div class="input">
-              <input name="firstName" type="text" size="20" />
+            <div class="form-control">
+              <input type="text" class="form-input" />
             </div>
           </div>
 
           <div class="form-row alt">
             <div class="label">Last Name</div>
-            <div class="input">
-              <input name="lastName" type="text" size="20" />
+            <div class="form-control">
+              <input type="text" class="form-input" />
             </div>
           </div>
-        </form>
-      </div>
 
-      <form>
-        <table width="578" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="350" height="35" valign="middle" bgcolor="#086B08">
-              <p>
-                <font size="2"
-                  ><strong
-                    ><font color="#FFFFFF"
-                      ><img
-                        src="images/MsSpacer.gif"
-                        width="10"
-                        height="1"
-                      />First Name</font
-                    ></strong
-                  ><br />
-                  <br />
-                </font>
-              </p>
-            </td>
-            <td width="228" valign="middle" bgcolor="#086B08">
-              <input name="firstName" type="text" size="20" />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#FFFFFF">
-              <p>
-                <font size="2"
-                  ><strong
-                    ><font color="#FFFFFF"
-                      ><img
-                        src="images/MsSpacer.gif"
-                        width="10"
-                        height="1" /></font
-                    >Last Name</strong
-                  ></font
-                ><br />
-              </p>
-            </td>
-            <td bgcolor="#FFFFFF">
-              <input name="lastName" type="text" size="20" /> <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <font size="2"
-                  ><strong
-                    ><font color="#FFFFFF"
-                      ><img
-                        src="images/MsSpacer.gif"
-                        width="10"
-                        height="1" /></font></strong></font
-                ><font color="#FFFFFF" size="2"><strong>E-mail</strong></font
-                ><br />
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <input name="email" type="text" value="" size="20" /> <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" valign="middle" bgcolor="#FFFFFF">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong
-                    >Phone Number</font
-                  ><br />
-                </strong>
-              </p>
-            </td>
-            <td bgcolor="#FFFFFF">
-              <input name="phone" type="text" value="" size="20" /> <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#FFFFFF" size="2">Mailing Address</font><br />
-                </strong>
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <input name="address1" type="text" value="" size="20" /> <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#FFFFFF">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong
-                    >City</font
-                  ></strong
-                >
-              </p>
-            </td>
-            <td bgcolor="#FFFFFF">
-              <input name="city" type="text" id="city" value="" size="20" />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong
-                    ><font color="#FFFFFF">State</font></font
-                  ><br />
-                </strong>
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <select name="state">
+          <div class="form-row">
+            <div class="label">E-mail</div>
+            <div class="form-control">
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">Phone Number</div>
+            <div class="form-control">
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">Mailing Address</div>
+            <div class="form-control">
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">City</div>
+            <div class="form-control">
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">State</div>
+            <div class="form-control">
+              <select name="state" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -302,138 +199,59 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
+            </div>
+          </div>
 
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#FFFFFF">
-              <p>
-                <strong>
-                  <font size="2"
-                    ><strong
-                      ><font color="#000000"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#000000" size="2">Zip Code</font><br />
-                </strong>
-              </p>
-            </td>
-            <td><input name="zip" type="text" value="" size="20" /> <br /></td>
-          </tr>
-          <tr>
-            <td bgcolor="#086B08">
-              <strong
-                ><font size="2"
-                  ><strong
-                    ><font color="#FFFFFF"
-                      ><img
-                        src="images/MsSpacer.gif"
-                        width="10"
-                        height="1" /></font></strong></font
-                ><font color="red" size="2"
-                  >Additional Information</font
-                ></strong
-              >
-            </td>
-            <td bgcolor="#086B08">
-              <textarea
-                name="additionalInformation"
-                cols="27"
-                rows="5"
-              ></textarea>
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#FFFFFF">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#FFFFFF" size="2">Profession</font><br />
-                </strong>
-              </p>
-            </td>
-            <td><input name="profession" type="text" value="" /></td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong
-                    ><font color="#FFFFFF">Sex</font></font
-                  ></strong
-                >
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <font color="#FFFFFF">
-                <input type="radio" name="sex" value="male" />
-                <font face="Verdana" size="2">Male</font></font
-              ><font color="#FFFFFF" face="Verdana">
-                <input type="radio" name="sex" value="female" /> </font
-              ><font color="#FFFFFF" size="2" face="Verdana">Female</font><br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#FFFFFF">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#000000"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#000000" size="2">Age</font><br />
-                </strong>
-              </p>
-            </td>
-            <td valign="middle">
-              <select name="age" style="width: 185px">
+          <div class="form-row alt">
+            <div class="label">Zip Code</div>
+            <div class="form-control">
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">Additional Information</div>
+            <div class="form-control">
+              <textarea cols="26" rows="5" form-input></textarea>
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">Profession</div>
+            <div class="form-control">
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">Sex</div>
+            <div class="form-control">
+              <input type="radio" name="sex" value="male" />
+              <span>Male</span>
+              <input type="radio" name="sex" value="female" />
+              <span>Female</span>
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">Age</div>
+            <div class="form-control">
+              <select name="age" class="form-select">
                 <option value="" selected>[Select One]</option>
-                <option value="<18 yrs"><18 yrs</option>
+                <option value="18 yrs">18 yrs</option>
                 <option value="19-25 yrs">19-25 yrs</option>
                 <option value="26-35 yrs">26-35 yrs</option>
                 <option value="36-45 yrs">36-45 yrs</option>
                 <option value="46-65 yrs">46-65 yrs</option>
                 <option value="66- over">66- over</option>
               </select>
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong
-                    ><font color="#FFFFFF">Education Level</font></font
-                  ><br />
-                </strong>
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <select name="education" style="width: 185px">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">Education Level</div>
+            <div class="form-control">
+              <select name="education" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="High School">High School</option>
                 <option value="Some College">Some College</option>
@@ -447,26 +265,13 @@
                 </option>
                 <option value="Self Educated">Self Educated</option>
               </select>
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#000000" size="2">Annual Income</font></strong
-                >
-              </p>
-            </td>
-            <td>
-              <select name="income" style="width: 185px">
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">Annual Income</div>
+            <div class="form-control">
+              <select name="income" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="below $12,000">below $12,000</option>
                 <option value="$12,000-$20,000">$12,000-$20,000</option>
@@ -475,28 +280,13 @@
                 <option value="$50,000-$90,000">$50,000-$90,000</option>
                 <option value="over $100,000">over $100,000</option>
               </select>
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><img
-                        src="images/MsSpacer.gif"
-                        width="10"
-                        height="1" /></strong
-                    ><font color="#FFFFFF"
-                      >My biggest health concern is:</font
-                    ></font
-                  ></strong
-                >
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <select name="health" style="width: 185px">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">My biggest health concern is:</div>
+            <div class="form-control">
+              <select name="health" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="Obesity">Obesity</option>
                 <option value="Diabetes">Diabetes</option>
@@ -504,29 +294,15 @@
                 <option value="Heart Disease">Heart Disease</option>
                 <option value="Cancer">Cancer</option>
               </select>
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#000000"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#000000" size="2"
-                    >I eat fresh vegetables and fruits from the grocery
-                    store</font
-                  ></strong
-                >
-              </p>
-            </td>
-            <td>
-              <select name="food" style="width: 185px">
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">
+              I eat fresh vegetables and fruits from the grocery store
+            </div>
+            <div class="form-control">
+              <select name="food" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="Always/Every day">Always/Every day</option>
                 <option value="Mostly/Every day">Mostly/Every day</option>
@@ -536,29 +312,15 @@
                 <option value="Rarely/Once a month">Rarely/Once a month</option>
                 <option value="Never">Never</option>
               </select>
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35" bgcolor="#086B08">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#FFFFFF"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong
-                    ><font color="#FFFFFF"
-                      >I exercise vigorously for at least 45 minutes</font
-                    ></font
-                  ></strong
-                >
-              </p>
-            </td>
-            <td bgcolor="#086B08">
-              <select name="exercise" style="width: 185px">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="label">
+              I exercise vigorously for at least 45 minutes
+            </div>
+            <div class="form-control">
+              <select name="exercise" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="Every day">Every day</option>
                 <option value="Every other day">Every other day</option>
@@ -567,48 +329,28 @@
                 <option value="Once each month">Once each month</option>
                 <option value="Pretty much never">Pretty much never</option>
               </select>
-              <br />
-            </td>
-          </tr>
-          <tr>
-            <td height="35">
-              <p>
-                <strong
-                  ><font size="2"
-                    ><strong
-                      ><font color="#000000"
-                        ><img
-                          src="images/MsSpacer.gif"
-                          width="10"
-                          height="1" /></font></strong></font
-                  ><font color="#000000" size="2"
-                    >Each year I see a doctor/health professional at least</font
-                  ></strong
-                >
-              </p>
-            </td>
-            <td>
-              <select name="healthDoctor" style="width: 185px">
+            </div>
+          </div>
+
+          <div class="form-row alt">
+            <div class="label">
+              Each year I see a doctor/health professional at least
+            </div>
+            <div class="form-control">
+              <select name="healthDoctor" class="form-select">
                 <option value="" selected>[Select One]</option>
                 <option value="0-10 Times">0-10 Times</option>
                 <option value="11-20 Time">11-20 Times</option>
                 <option value="More than 21 Times">More than 21 Times</option>
               </select>
-              <br />
-            </td>
-          </tr>
-        </table>
-        <p>
-          <font size="2">
-            <strong>
-              <font color="#FFFFFF">
-                <img src="images/MsSpacer.gif" width="150" height="1" />
-              </font>
-            </strong>
-          </font>
-          <input type="submit" value="Submit" />
-        </p>
-      </form>
+            </div>
+          </div>
+
+          <div class="submit-button">
+            <input type="submit" value="Submit (disabled)" disabled />
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
