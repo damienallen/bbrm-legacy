@@ -89,7 +89,7 @@ section {
   text-decoration: underline;
 }
 
-.writertitle {
+.writer-title {
   margin-top: 8px;
   font-weight: bold;
   font-style: italic;
@@ -169,6 +169,29 @@ section {
 .submit-button {
   text-align: center;
   margin-top: 32px;
+}
+
+/* Promo page */
+.promo-content {
+  font-size: 18px;
+  margin: 32px 64px 64px 278px;
+  max-width: 640px;
+
+  font-family: "Helvetica", sans-serif;
+  color: #cc0000;
+  text-align: center;
+}
+
+.promo-title {
+  font-weight: 600;
+}
+
+.promo-subtitle {
+  font-size: 0.9em;
+}
+
+.video {
+  margin: 32px 0;
 }
 
 /* Navigation */
