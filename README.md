@@ -1,3 +1,3 @@
 # bbrm-legacy
 
-[bbrm.org](https://bbrm.org) website archive
+Source code of the Black Biomedical Research Movement website, remastered with modern web standards.
