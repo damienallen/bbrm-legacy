@@ -76,12 +76,6 @@ section {
   margin-bottom: 32px;
 }
 
-.divider {
-  margin: 64px 0;
-  width: 250px;
-  border-bottom: 1px solid #000;
-}
-
 /* Articles page */
 .articles-list ul {
   margin: 32px 0;
@@ -156,8 +150,15 @@ section {
 }
 
 /* Support page */
-.contact {
-  font-size: 0.9em;
+.divider {
+  margin: 48px 0;
+  width: 320px;
+  border-bottom: 1px solid #000;
+}
+
+.location {
+  text-decoration: underline;
+  margin-bottom: 32px;
 }
 
 /* Join page */
