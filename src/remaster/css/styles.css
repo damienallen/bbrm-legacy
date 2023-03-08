@@ -6,12 +6,21 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
 /* Page template */
 .page-content {
   font-size: 18px;
   line-height: calc(1ex / 0.32);
 
-  margin: 32px 64px 64px 278px;
+  margin: 32px auto 64px auto;
   max-width: 100%;
   width: 70ch;
 }
@@ -68,24 +77,19 @@ section {
 }
 
 .divider {
-  margin: 32px 0;
+  margin: 64px 0;
   width: 250px;
   border-bottom: 1px solid #000;
 }
 
 /* Articles page */
+.articles-list ul {
+  margin: 32px 0;
+}
+
 .articles-list li {
   padding: 16px 0;
   list-style: none;
-}
-
-.headline a {
-  text-decoration: none;
-}
-
-.headline a:hover,
-.headline a:active {
-  text-decoration: underline;
 }
 
 .writer-title {
@@ -121,7 +125,7 @@ section {
 
 /* Links page */
 .links-content p {
-  padding: 8px 0;
+  padding: 16px 0;
 }
 
 /* Support page */
@@ -171,7 +175,7 @@ section {
 /* Promo page */
 .promo-content {
   font-size: 18px;
-  margin: 32px 64px 64px 278px;
+  margin: 32px auto 64px auto;
   max-width: 640px;
 
   font-family: "Helvetica", sans-serif;
