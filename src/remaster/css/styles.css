@@ -81,7 +81,6 @@ section {
 
 .headline a {
   text-decoration: none;
-  font-size: 1.1em;
 }
 
 .headline a:hover,
@@ -91,14 +90,12 @@ section {
 
 .writer-title {
   margin-top: 8px;
-  font-weight: bold;
   font-style: italic;
   font-size: 0.9em;
 }
 
 .byline {
   margin-top: 4px;
-  font-style: italic;
 }
 
 .articlebody {
