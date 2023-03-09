@@ -24,9 +24,9 @@ a:active {
 }
 
 .home-subtitle {
-  font-weight: bold;
+  font-style: italic;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .sidebar {
@@ -36,37 +36,47 @@ a:active {
   height: 100%;
   width: 234px;
   z-index: 1;
-  padding-top: 185px;
+  padding-top: 200px;
 
   position: absolute;
   top: 0;
   left: 0;
 }
 
+.sidebar p {
+  margin: 8px;
+}
+
 .featured-header {
   background: url(../images/featured_dna.png) no-repeat;
   height: 46px;
-  margin-left: 8px;
+  margin: 0 0 16px 8px;
   padding: 10px 0 0 80px;
 
   font-family: "Helvetica", sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   color: #dd312f;
 }
 
 .more {
-  font-size: 1em !important;
+  margin: 16px 8px 32px 8px;
+}
+
+.more a {
+  font-weight: bold;
 }
 
 .main {
   margin: 0 auto;
   width: 70ch;
+  font-size: 18px;
 }
 
 .main p {
   margin: 16px auto;
+  line-height: calc(1ex / 0.32);
 }
 
 .red {
