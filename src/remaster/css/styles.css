@@ -119,11 +119,11 @@ section {
 
 .movement {
   width: 60ch;
-  margin: 64px auto 32px auto;
+  margin: 64px auto;
 }
 
 .funding {
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-align: center;
 }
 
@@ -150,6 +150,9 @@ section {
 }
 
 /* Support page */
+.support {
+  width: 320px;
+}
 .divider {
   margin: 48px 0;
   width: 320px;
@@ -162,7 +165,6 @@ section {
 }
 
 /* Join page */
-
 .join-form {
   margin-bottom: 100px;
   max-width: 640px;
