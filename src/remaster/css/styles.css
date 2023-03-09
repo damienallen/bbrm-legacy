@@ -31,18 +31,19 @@ a:active {
 
 .sidebar-container {
   position: sticky;
-  top: 0;
+  height: 100%;
+  width: 234px;
+  z-index: 1;
+  top: 48px;
 }
 
 .sidebar {
   background: url(../images/featured_background.png) repeat-y;
   font-size: 0.9em;
 
-  min-height: 120vh;
-  width: 234px;
-  z-index: 1;
+  position: absolute;
   margin-top: -64px;
-  padding: 16px 0;
+  padding: 32px 0 128px 0;
 }
 
 .sidebar p {
