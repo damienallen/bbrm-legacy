@@ -1,5 +1,4 @@
 /* Global */
-
 body {
   font-family: "Times New Roman", Times, serif;
   margin: 0;
@@ -15,65 +14,71 @@ a:active {
   text-decoration: underline;
 }
 
-/* Page template */
-.page-content {
-  font-size: 18px;
-  line-height: calc(1ex / 0.32);
+/* Home page */
+.home-content {
+  margin-left: 234px;
+}
 
-  margin: 32px auto 64px auto;
-  max-width: 100%;
+.home-title {
+  font-size: 1.4em !important;
+}
+
+.home-subtitle {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.sidebar {
+  background: url(../images/featured_background.png) repeat-y;
+  font-size: 0.9em;
+
+  height: 100%;
+  width: 234px;
+  z-index: 1;
+  padding-top: 185px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.featured-header {
+  background: url(../images/featured_dna.png) no-repeat;
+  height: 46px;
+  margin-left: 8px;
+  padding: 10px 0 0 80px;
+
+  font-family: "Helvetica", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  color: #dd312f;
+}
+
+.more {
+  font-size: 1em !important;
+}
+
+.main {
+  margin: 0 auto;
   width: 70ch;
 }
 
-@media (max-width: 768px) {
-  .page-content {
-    margin: 64px 48px;
-  }
+.main p {
+  margin: 16px auto;
 }
 
-.page-content ol {
-  padding-left: 16px;
-  counter-reset: list;
+.red {
+  color: #cc0000;
 }
 
-li {
-  padding: 4px 0;
+.green {
+  color: #008000;
 }
 
-.page-content ol > li {
-  list-style: none;
-}
-
-.page-content ol > li:before {
-  content: "(" counter(list, numeric) ") ";
-  counter-increment: list;
-}
-
-.page-header {
-  font-family: "Helvetica", sans-serif;
-  letter-spacing: 0.2em;
-  font-size: 1.2em;
-  font-weight: 800;
-  color: #dd312f;
-
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.section-header {
-  font-weight: bold;
-}
-
-section {
-  padding: 1.2em 0;
-}
-
-.note {
-  font-size: 0.9em;
-  color: #666;
-
-  text-align: center;
-  margin-bottom: 32px;
+.gold {
+  color: #ff9900;
 }
 
 /* Articles page */
@@ -225,9 +230,72 @@ section {
   margin: 32px 0;
 }
 
+/* General */
+.page-content {
+  font-size: 18px;
+  line-height: calc(1ex / 0.32);
+
+  margin: 32px auto 64px auto;
+  max-width: 100%;
+  width: 70ch;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    margin: 64px 48px;
+  }
+}
+
+.page-content ol {
+  padding-left: 16px;
+  counter-reset: list;
+}
+
+li {
+  padding: 4px 0;
+}
+
+.page-content ol > li {
+  list-style: none;
+}
+
+.page-content ol > li:before {
+  content: "(" counter(list, numeric) ") ";
+  counter-increment: list;
+}
+
+.page-header {
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #dd312f;
+
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-header {
+  font-weight: bold;
+}
+
+section {
+  padding: 1.2em 0;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #666;
+
+  text-align: center;
+  margin-bottom: 32px;
+}
+
 /* Navigation */
 .nav {
+  position: relative;
   width: 100%;
+  z-index: 2;
 }
 
 .nav img {
@@ -291,7 +359,11 @@ section {
 }
 
 .logo {
-  margin-right: 8px;
+  margin: 8px 16px;
+}
+
+.logo img {
+  height: 90px;
 }
 
 .nav-fill {
