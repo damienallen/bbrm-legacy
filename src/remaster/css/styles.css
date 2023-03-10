@@ -1,6 +1,7 @@
 /* Global */
 body {
   font-family: "Times New Roman", Times, serif;
+  background: #fff;
   margin: 0;
   padding: 0;
 }
@@ -399,11 +400,11 @@ section {
 }
 
 .logo {
-  margin: 8px 16px;
+  margin: 16px 32px;
 }
 
 .logo img {
-  height: 90px;
+  height: 75px;
 }
 
 .nav-fill {
@@ -456,7 +457,7 @@ section {
 }
 
 #nav-logo img {
-  height: 64px;
+  height: 75px;
 }
 
 #nav-close {
