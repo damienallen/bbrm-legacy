@@ -1,166 +1,447 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BBRM</title>
 
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../images/icons/safari-pinned-tab.svg"
+      color="#006500"
+    />
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="BBRM" />
+    <meta name="application-name" content="BBRM" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="../images/icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script
+      defer
+      data-domain="bbrm.org"
+      src="https://stats.dallen.dev/js/script.js"
+    ></script>
 
-<title>BBRM</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+    ></script>
+  </head>
 
-<script language="JavaScript">
-<!--
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+  <body>
+    <div id="mobile-overlay">
+      <div id="nav-logo">
+        <img src="../images/logo_bbrm.png" />
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="join.html">Join</a>
+        <a href="articles.html">Published Articles</a>
+        <a href="credits.html">Credits</a>
+        <a href="FHPS.html">FHPS</a>
+        <a href="links.html">Links</a>
+        <a href="mission.html">Our Mission</a>
+      </div>
+    </div>
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+    <div id="nav-open">
+      <img src="../images/buttons/menu.svg" width="32" height="32" />
+    </div>
+    <div id="nav-close">
+      <img src="../images/buttons/close.svg" width="32" height="32" />
+    </div>
 
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
+    <div class="nav">
+      <div class="primary-nav">
+        <div class="banner-left">
+          <img src="../images/graphic_corner.png" />
+        </div>
+        <div class="nav-fill">
+          <div class="primary-links">
+            <a href="index.html">
+              <img
+                class="default"
+                src="../images/buttons/home.gif"
+                alt="Home"
+              />
+              <img
+                class="over"
+                src="../images/buttons/home_over.gif"
+                alt="Home"
+              />
+            </a>
+            <a href="support.html">
+              <img
+                class="default"
+                src="../images/buttons/comm_support.gif"
+                alt="Support"
+              />
+              <img
+                class="over"
+                src="../images/buttons/comm_support_over.gif"
+                alt="Support"
+              />
+            </a>
+            <a href="join.html">
+              <img
+                class="default"
+                src="../images/buttons/join_bbrm.gif"
+                alt="Join"
+              />
+              <img
+                class="over"
+                src="../images/buttons/join_bbrm_over.gif"
+                alt="Join"
+              />
+            </a>
+            <div class="gradation"></div>
+          </div>
+          <div class="graphic-mid">
+            <img class="banner-right" src="../images/graphic_mid.png" />
+            <div class="logo">
+              <img src="../images/logo_bbrm.png" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-function FP_swapImgRestore() {//v1.0
- var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
-  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
-  doc.$imgSwaps=null; }
-}
-// -->
+      <div class="secondary-nav">
+        <div class="secondary-links">
+          <a href="articles.html">
+            <img
+              class="default articles-link"
+              src="../images/buttons/articles.gif"
+              alt="Published Articles"
+            />
+            <img
+              class="over articles-link"
+              src="../images/buttons/articles_over.gif"
+              alt="Published Articles"
+            />
+          </a>
+          <a href="credits.html">
+            <img
+              class="default"
+              src="../images/buttons/credits.gif"
+              alt="Credits"
+            />
+            <img
+              class="over"
+              src="../images/buttons/credits_over.gif"
+              alt="Credits"
+            />
+          </a>
+          <a href="FHPS.html">
+            <img class="default" src="../images/buttons/FHPS.gif" alt="FHPS" />
+            <img
+              class="over"
+              src="../images/buttons/FHPS_over.gif"
+              alt="FHPS"
+            />
+          </a>
+          <a href="links.html">
+            <img
+              class="default"
+              src="../images/buttons/links.gif"
+              alt="Links"
+            />
+            <img
+              class="over"
+              src="../images/buttons/links_over.gif"
+              alt="Links"
+            />
+          </a>
+          <a href="mission.html">
+            <img
+              class="default"
+              src="../images/buttons/mission.gif"
+              alt="Our Mission"
+            />
+            <img
+              class="over"
+              src="../images/buttons/mission_over.gif"
+              alt="Our Mission"
+            />
+          </a>
+        </div>
+      </div>
 
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
+      <div class="nav-under">
+        <div class="under-left">
+          <img src="../images/graphic_under_left.png" />
+        </div>
+        <div class="under-right">
+          <img src="../images/graphic_under_right.png" />
+        </div>
+      </div>
+    </div>
 
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
+    <div class="page-content">
+      <table cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tbody>
+          <tr>
+            <td width="100%" height="100%" valign="top">
+              <p class="style1">
+                Pat Allen targets AIDS research, raising health consciousness in
+                the black community
+              </p>
+              <p><strong>By Jim Scott</strong></p>
+              <p>Office of News Services</p>
+              <p>
+                As a Westchester, N.Y., high school student in the late 1970s,
+                Patrick Allen was an admitted bookworm. He spent many wintry
+                afternoons in the wrestling room doing his homework, waiting for
+                his younger brother to finish practice.
+              </p>
+              <p>
+                "It smelled terrible in there," recalled Allen. "Nothing but
+                sweat."
+              </p>
+              <p>
+                Although the wrestling coaches encouraged him to try out for the
+                team, he politely declined and went back to his books. But the
+                coaches' invitations eventually planted the seeds of competition
+                in him.
+              </p>
+              <p>
+                In his junior year, Allen joined the team, losing only a handful
+                of matches. During his senior year he won every match, earning
+                all-state honors.
+              </p>
+              <p>
+                Allen went on to attend Springfield College in Massachusetts,
+                where he was named to the NCAA All-American wrestling team in
+                1984.
+              </p>
+              <p>
+                The message? When Allen sets his sights on a target, you can be
+                sure of a bull's eye.
+              </p>
+              <p>
+                Now a research associate in the molecular, cellular and
+                developmental biology department at the University of Colorado
+                at Boulder, Allen is a principal investigator on a $1.2 million
+                grant from the National Institute of Health. The grant's purpose
+                is to define the structure of the HIV, the virus that causes
+                AIDS, and to search for inhibitors to target specific proteins.
+              </p>
+              <p>
+                Allen, believed to be the only black principal investigator on
+                an AIDS research project in the nation, hopes his work may
+                eventually help in designing new drugs to fight HIV. He and
+                colleague Larry Gold, a professor of biology at CU-Boulder, had
+                a patent approved in 1997 to create specific RNA binding sites
+                to inhibit the lethal virus.
+              </p>
+              <p>
+                Two years ago, Allen spearheaded a fledgling organization called
+                the Black Biomedical Research Movement to involve more blacks in
+                biomedical research.
+              </p>
+              <p>
+                "This is not about affirmative action, religion, politics or
+                racism," he said. "In its simplest form, this is a science
+                outreach program with the black community being the primary
+                target group."
+              </p>
+              <p>
+                One of Allen's biggest concerns? Although AIDS in the nation's
+                black community has evolved into a full-blown epidemic, less
+                than one percent of U.S. biomedical researchers are black - "a
+                disenfranchisement that directly affects health," he said.
+              </p>
+              <p>
+                According to a 1998 study by the Kaiser Family Foundation of
+                Menlo Park, Calif., the annual HIV infection rate of AIDS among
+                black men is six times that of white men. Nearly one-third of
+                new AIDS cases in black men resulted from intravenous drug use,
+                compared to one-fourth of new U.S. cases in white men.
+              </p>
+              <p>
+                The rate of HIV infection for black women is now 16 times that
+                of white women, according to the study. Among black women,
+                heterosexual contact is the primary mode of transmission, and
+                two-thirds of children born with the virus in America are black.
+              </p>
+              <p>
+                In addition to seeing more blacks go into biomedical research,
+                Allen is determined to raise health consciousness in the black
+                community - goals that go hand-in-hand. Blacks are
+                disproportionately struck by a number of diseases such as
+                hypertension, sickle-cell anemia, certain types of cancer and
+                AIDS. The disparity is caused in part by social, cultural and
+                economic differences and a historical mistrust of the biomedical
+                community, he said.
+              </p>
+              <p>
+                "The fear and suspicion in the black community of the biomedical
+                establishment is a major public health problem that reaches
+                beyond these diseases," Allen noted. "What we really need is a
+                massive cultural shift to take place for such changes to occur."
+              </p>
+              <p>
+                The ultimate goal of his movement, he explained, is to promote
+                black health consciousness at all ages across the country and to
+                have more black people participate in the discovery and
+                development of new drugs to treat diseases, particularly those
+                diseases that prey on the black community.
+              </p>
+              <p>
+                "Ideally, I would like to see black people make the same kind of
+                progress that women have made in participating in research
+                affecting their own health. But it may take 50 years for a
+                change like that to happen."
+              </p>
+              <p>
+                In his quest to make his fledgling program fly, Allen has met
+                with U.S. Surgeon General David Satcher, U.S. Secretary for
+                Health and Human Services Donna Shalala and a host of other
+                administrative policy makers and HIV researchers around the
+                nation. He also has attended a number of national biomedical
+                meetings, seeking support for the movement.
+              </p>
+              <p>
+                In addition, Allen has received a commitment from Roche
+                Biosciences of Palo Alto, Calif., to donate laboratory chemicals
+                to graduate school labs where young black researchers are
+                learning the newest biomedical techniques. Allen noted that
+                there already are a number of minority-based programs to
+                encourage black people and other minorities to go into the
+                biomedical sciences through scholarships and stipends.
+              </p>
+              <p>
+                "The overall state of blacks' health is so poor, I believe we
+                need a grand-scale program, not unlike the anti-tobacco or
+                pro-environment campaigns, that will result in a new generation
+                of black biomedical researchers to help create a more
+                health-conscious black community," Allen said.
+              </p>
+              <p>
+                Some progress was made in 1997 when President Clinton apologized
+                to the black community for the Tuskegee experiments undertaken
+                on black men by the U.S. Department of Health from the 1930s to
+                the 1970s, Allen said. In response to a 1998 request by the
+                Congressional Black Caucus for the government to declare a state
+                of emergency for blacks and the AIDS epidemic, President Clinton
+                recently tabbed $156 million for outreach programs to measure
+                the impact of AIDS on black communities.
+              </p>
+              <p>
+                Allen is taking his movement to the public one step at a time.
+                In November 1998, he spoke to about 50 high school students at
+                Montbello High School in Denver about his own life, his research
+                and the goals of the Black Biomedical Research Movement.
+              </p>
+              <p>
+                During his talk, Allen frequently encouraged the students to ask
+                questions.
+              </p>
+              <p>
+                "There is no such thing as stupid question," he told them. "You
+                need to ask questions when you don't understand, and you need to
+                be persistent. Keep your focus and remember one thing -
+                knowledge is king."
+              </p>
+              <p>
+                When Allen was five years old in Jamaica, his parents moved to
+                New York, seeking a better life for their family. Allen stayed
+                in Jamaica with his six siblings, living with an extended family
+                of aunts, uncles and cousins for seven years.
+              </p>
+              <p>
+                At the age of 12, he and his siblings moved to New York and were
+                reunited with his father, who had become a machinist, and his
+                mother, then a nurse's aid. But the culture shock of New York -
+                where toughness and athletics were the primary avenues of
+                popularity - made life difficult.
+              </p>
+              <p>"It was the hardest time of my life," he said.</p>
+              <p>
+                After Allen graduated from Springfield College, he went on to
+                earn his doctorate from the University of California, Santa Cruz
+                and received tenure track offers to teach at a number of
+                universities. He chose to conduct research at CU-Boulder because
+                of its international reputation for research on ribonucleic
+                acid, or RNA, and its link to a number of viruses, including
+                AIDS.
+              </p>
+              <p>
+                The beauty, recreational opportunities and family ties in the
+                Boulder area also played a part in his decision, said Allen, who
+                regularly takes 40- to 50-mile fast, uphill rides on his
+                mountain bike through the Front Range mountains as a way to
+                challenge his own limits. He also is an avid skier and
+                snowshoer.
+              </p>
+              <p>"I just like to be outdoors," he explained.</p>
+              <p>
+                In addition to his faculty position at CU-Boulder, Allen has
+                served as a consultant to NexStar Pharmaceuticals, the Boulder
+                biotech company that primarily targets AIDS and cancer.
+              </p>
+              <p>
+                "I know I can't change the world," Allen said. "But I can try to
+                change the way we promote biomedicine to black people that may
+                stimulate black students to enter into biomedical research and
+                the black community in general to reach out for medical help."
+              </p>
+              <p>courtesy of the Coloradan</p>
+              <p>
+                Jim Scott(EPOBio'73) has been the chief science writer for
+                Office of News Services for 11 years. His parents, sister and
+                brother also graduated from CU.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
+    <script>
+      // Open mobile navigation overlay
+      const openNav = () => {
+        $("#nav-open").hide();
+        $("#nav-close").show();
+        $("#mobile-overlay").css("display", "flex");
+        $("#nav-logo").show();
+        $("body").css("overflow-y", "hidden");
+      };
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
-</script>
+      // Close navigation overlay
+      const closeNav = () => {
+        $("#nav-open").show();
+        $("#nav-close").hide();
+        $("#mobile-overlay").hide();
+        $("#nav-logo").hide();
+        $("body").css("overflow-y", "auto");
+      };
 
-<style type="text/css">
-<!--
-.style1 {
-	font-size: 18px;
-	font-weight: bold;
-}
--->
-</style>
-
-<style type="text/css">
-<!--
-.style1 {
-	font-size: 18px;
-	font-weight: bold;
-}
--->
-</style>
-</head><body onLoad="FP_preloadImgs('images/btn_home_over.gif', 'images/btn_comm_support_over.gif', 'images/btn_join_bbrm_over.gif', 'images/btn_articles_over.gif', 'images/btn_credits.gif', 'images/btn_FHPS_over.gif', 'images/btn_links_over.gif', 'images/btn_mission_over.gif', 'images/btn_credits_over.gif')" topmargin="0" leftmargin="0">
-
-
-	  
-		<table id="table2" cellpadding="0" cellspacing="0" height="718" width="100%">
-			<!-- MSTableType="layout" --><tbody><tr>
-				<td rowspan="3" bgcolor="#ffffff" valign="top">
-				<img src="../images/graphic_corner.gif" border="0" height="140" width="267"></td>
-				<td colspan="2" background="../images/red_gradation.gif" height="29" valign="top"><a href="../index.html"><img border="0" src="../images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','../images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../support.html"><img border="0" src="../images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','../images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../join.html"><img border="0" src="../images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','../images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="../images/red_gradation.gif" width="31" height="29"></td>
-			</tr>
-			<tr>
-				<td height="1"></td>
-				<td rowspan="2" bordercolor="#FFFFFF" align="right" bgcolor="#ffffff" valign="top">
-				<img src="../images/logo_bbrm.jpg" border="0" height="104" width="133"></td>
-			</tr>
-			<tr>
-				<td bordercolor="#FFFFFF" bgcolor="#ffffff" height="110" valign="top">
-				<img src="../images/graphic_mid_logotype.gif" border="0" height="110" width="384"></td>
-			</tr>
-			<tr>
-				<td colspan="3" background="../images/green_gradation.gif" height="18" valign="top"><a href="../articles.html"><img src="../images/btn_articles.gif" name="img4" width="160" height="18" border="0" id="img4" onMouseOver="FP_swapImg(1,1,/*id*/'img4','../images/btn_articles_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../credits.html"><img src="../images/btn_credits.gif" name="img5" width="66" height="18" border="0" id="img5" onMouseOver="FP_swapImg(1,1,/*id*/'img5','../images/btn_credits_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../FHPS.html"><img src="../images/btn_FHPS.gif" name="img6" width="47" height="18" border="0" id="img6" onMouseOver="FP_swapImg(1,1,/*id*/'img6','../images/btn_FHPS_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../links.html"><img src="../images/btn_links.gif" name="img7" width="47" height="18" border="0" id="img7" onMouseOver="FP_swapImg(1,1,/*id*/'img7','../images/btn_links_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../mission.html"><img src="../images/btn_mission.gif" name="img8" width="92" height="18" border="0" id="img8" onMouseOver="FP_swapImg(1,1,/*id*/'img8','../images/btn_mission_over.gif')" onMouseOut="FP_swapImgRestore()"></a></td>
-			</tr>
-			<tr>
-				<td valign="top">
-				<img src="../images/graphic_feat_all_white.gif" border="0" height="72" width="267"></td>
-				<td height="73" valign="top">
-				<img src="../images/graphic_under_curve.gif" border="0" height="54" width="405"></td>
-				<td rowspan="2" valign="top"><!-- MSCellType="empty" -->&nbsp;</td>
-			</tr>
-			
-			<tr>
-			  <td valign="top">&nbsp;			    </td>
-				<td height="444" valign="top">
-				<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
-					<!-- MSCellFormattingTableID="2" -->
-					<tbody><tr>
-						<td width="100%" height="100%" valign="top"><!-- MSCellFormattingType="content" -->                        <!-- InstanceBeginEditable name="EditRegion3" -->
-						  <p class="style1">Pat Allen targets AIDS research, raising health consciousness in the black community</p>
-						  <p><strong>By Jim Scott</strong></p>
-						  <p>Office of News Services</p>
-						  <p>As a Westchester, N.Y., high school student in  the late 1970s, Patrick Allen was an admitted bookworm. He spent many  wintry afternoons in the wrestling room doing his homework, waiting for  his younger brother to finish practice.</p>
-						  <p>"It smelled terrible in there," recalled Allen. "Nothing but sweat."</p>
-						  <p>Although the wrestling coaches encouraged him to  try out for the team, he politely declined and went back to his books.  But the coaches' invitations eventually planted the seeds of  competition in him.</p>
-						  <p>In his junior year, Allen joined the team,  losing only a handful of matches. During his senior year he won every  match, earning all-state honors.</p>
-						  <p>Allen went on to attend Springfield College in  Massachusetts, where he was named to the NCAA All-American wrestling  team in 1984.</p>
-						  <p>The message? When Allen sets his sights on a target, you can be sure of a bull's eye. </p>
-						  <p>Now a research associate in the molecular,  cellular and developmental biology department at the University of  Colorado at Boulder, Allen is a principal investigator on a $1.2  million grant from the National Institute of Health. The grant's  purpose is to define the structure of the HIV, the virus that causes  AIDS, and to search for inhibitors to target specific proteins. </p>
-						  <p>Allen, believed to be the only black principal  investigator on an AIDS research project in the nation, hopes his work  may eventually help in designing new drugs to fight HIV. He and  colleague Larry Gold, a professor of biology at CU-Boulder, had a  patent approved in 1997 to create specific RNA binding sites to inhibit  the lethal virus. </p>
-						  <p>Two years ago, Allen spearheaded a fledgling  organization called the Black Biomedical Research Movement to involve  more blacks in biomedical research.</p>
-						  <p>"This is not about affirmative action, religion,  politics or racism," he said. "In its simplest form, this is a science  outreach program with the black community being the primary target  group." </p>
-						  <p>One of Allen's biggest concerns? Although AIDS  in the nation's black community has evolved into a full-blown epidemic,  less than one percent of U.S. biomedical researchers are black - "a  disenfranchisement that directly affects health," he said.</p>
-						  <p>According to a 1998 study by the Kaiser Family  Foundation of Menlo Park, Calif., the annual HIV infection rate of AIDS  among black men is six times that of white men. Nearly one-third of new  AIDS cases in black men resulted from intravenous drug use, compared to  one-fourth of new U.S. cases in white men.</p>
-						  <p>The rate of HIV infection for black women is now  16 times that of white women, according to the study. Among black  women, heterosexual contact is the primary mode of transmission, and  two-thirds of children born with the virus in America are black.</p>
-						  <p>In addition to seeing more blacks go into  biomedical research, Allen is determined to raise health consciousness  in the black community - goals that go hand-in-hand. Blacks are  disproportionately struck by a number of diseases such as hypertension,  sickle-cell anemia, certain types of cancer and AIDS. The disparity is  caused in part by social, cultural and economic differences and a  historical mistrust of the biomedical community, he said.</p>
-						  <p>"The fear and suspicion in the black community  of the biomedical establishment is a major public health problem that  reaches beyond these diseases," Allen noted. "What we really need is a  massive cultural shift to take place for such changes to occur."</p>
-						  <p>The ultimate goal of his movement, he explained,  is to promote black health consciousness at all ages across the country  and to have more black people participate in the discovery and  development of new drugs to treat diseases, particularly those diseases  that prey on the black community.</p>
-						  <p>"Ideally, I would like to see black people make  the same kind of progress that women have made in participating in  research affecting their own health. But it may take 50 years for a  change like that to happen."</p>
-						  <p>In his quest to make his fledgling program fly,  Allen has met with U.S. Surgeon General David Satcher, U.S. Secretary  for Health and Human Services Donna Shalala and a host of other  administrative policy makers and HIV researchers around the nation. He  also has attended a number of national biomedical meetings, seeking  support for the movement.</p>
-						  <p>In addition, Allen has received a commitment  from Roche Biosciences of Palo Alto, Calif., to donate laboratory  chemicals to graduate school labs where young black researchers are  learning the newest biomedical techniques. Allen noted that there  already are a number of minority-based programs to encourage black  people and other minorities to go into the biomedical sciences through  scholarships and stipends.</p>
-						  <p>"The overall state of blacks' health is so poor,  I believe we need a grand-scale program, not unlike the anti-tobacco or  pro-environment campaigns, that will result in a new generation of  black biomedical researchers to help create a more health-conscious  black community," Allen said.</p>
-						  <p>Some progress was made in 1997 when President  Clinton apologized to the black community for the Tuskegee experiments  undertaken on black men by the U.S. Department of Health from the 1930s  to the 1970s, Allen said. In response to a 1998 request by the  Congressional Black Caucus for the government to declare a state of  emergency for blacks and the AIDS epidemic, President Clinton recently  tabbed $156 million for outreach programs to measure the impact of AIDS  on black communities.</p>
-						  <p>Allen is taking his movement to the public one  step at a time. In November 1998, he spoke to about 50 high school  students at Montbello High School in Denver about his own life, his  research and the goals of the Black Biomedical Research Movement.</p>
-						  <p>During his talk, Allen frequently encouraged the students to ask questions.</p>
-						  <p>"There is no such thing as stupid question," he  told them. "You need to ask questions when you don't understand, and  you need to be persistent. Keep your focus and remember one thing -  knowledge is king."</p>
-						  <p>When Allen was five years old in Jamaica, his  parents moved to New York, seeking a better life for their family.  Allen stayed in Jamaica with his six siblings, living with an extended  family of aunts, uncles and cousins for seven years.</p>
-						  <p>At the age of 12, he and his siblings moved to  New York and were reunited with his father, who had become a machinist,  and his mother, then a nurse's aid. But the culture shock of New York -  where toughness and athletics were the primary avenues of popularity -  made life difficult.</p>
-						  <p>"It was the hardest time of my life," he said.</p>
-						  <p>After Allen graduated from Springfield College,  he went on to earn his doctorate from the University of California,  Santa Cruz and received tenure track offers to teach at a number of  universities. He chose to conduct research at CU-Boulder because of its  international reputation for research on ribonucleic acid, or RNA, and  its link to a number of viruses, including AIDS.</p>
-						  <p>The beauty, recreational opportunities and  family ties in the Boulder area also played a part in his decision,  said Allen, who regularly takes 40- to 50-mile fast, uphill rides on  his mountain bike through the Front Range mountains as a way to  challenge his own limits. He also is an avid skier and snowshoer.</p>
-						  <p>"I just like to be outdoors," he explained. </p>
-						  <p>In addition to his faculty position at  CU-Boulder, Allen has served as a consultant to NexStar  Pharmaceuticals, the Boulder biotech company that primarily targets  AIDS and cancer.</p>
-						  <p>"I know I can't change the world," Allen said.  "But I can try to change the way we promote biomedicine to black people  that may stimulate black students to enter into biomedical research and  the black community in general to reach out for medical help." </p>
-						  <p>courtesy of the Coloradan</p>
-						  <p>Jim Scott(EPOBio'73) has been the chief science  writer for Office of News Services for 11 years. His parents, sister  and brother also graduated from CU.</p>
-						</td>
-					</tr>
-				</tbody></table>				</td>
-			</tr>
-		</tbody></table>
-  
-	
-
-	</body>
+      // Set up navigation onclicks
+      $("#nav-open").click(openNav);
+      $("#nav-close").click(closeNav);
+    </script>
+  </body>
 </html>

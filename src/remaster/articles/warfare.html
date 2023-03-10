@@ -1,202 +1,694 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BBRM</title>
 
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../images/icons/safari-pinned-tab.svg"
+      color="#006500"
+    />
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="BBRM" />
+    <meta name="application-name" content="BBRM" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="../images/icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script
+      defer
+      data-domain="bbrm.org"
+      src="https://stats.dallen.dev/js/script.js"
+    ></script>
 
-<title>BBRM</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+    ></script>
+  </head>
 
-<script language="JavaScript">
-<!--
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+  <body>
+    <div id="mobile-overlay">
+      <div id="nav-logo">
+        <img src="../images/logo_bbrm.png" />
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="join.html">Join</a>
+        <a href="articles.html">Published Articles</a>
+        <a href="credits.html">Credits</a>
+        <a href="FHPS.html">FHPS</a>
+        <a href="links.html">Links</a>
+        <a href="mission.html">Our Mission</a>
+      </div>
+    </div>
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+    <div id="nav-open">
+      <img src="../images/buttons/menu.svg" width="32" height="32" />
+    </div>
+    <div id="nav-close">
+      <img src="../images/buttons/close.svg" width="32" height="32" />
+    </div>
 
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
+    <div class="nav">
+      <div class="primary-nav">
+        <div class="banner-left">
+          <img src="../images/graphic_corner.png" />
+        </div>
+        <div class="nav-fill">
+          <div class="primary-links">
+            <a href="index.html">
+              <img
+                class="default"
+                src="../images/buttons/home.gif"
+                alt="Home"
+              />
+              <img
+                class="over"
+                src="../images/buttons/home_over.gif"
+                alt="Home"
+              />
+            </a>
+            <a href="support.html">
+              <img
+                class="default"
+                src="../images/buttons/comm_support.gif"
+                alt="Support"
+              />
+              <img
+                class="over"
+                src="../images/buttons/comm_support_over.gif"
+                alt="Support"
+              />
+            </a>
+            <a href="join.html">
+              <img
+                class="default"
+                src="../images/buttons/join_bbrm.gif"
+                alt="Join"
+              />
+              <img
+                class="over"
+                src="../images/buttons/join_bbrm_over.gif"
+                alt="Join"
+              />
+            </a>
+            <div class="gradation"></div>
+          </div>
+          <div class="graphic-mid">
+            <img class="banner-right" src="../images/graphic_mid.png" />
+            <div class="logo">
+              <img src="../images/logo_bbrm.png" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-function FP_swapImgRestore() {//v1.0
- var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
-  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
-  doc.$imgSwaps=null; }
-}
-// -->
+      <div class="secondary-nav">
+        <div class="secondary-links">
+          <a href="articles.html">
+            <img
+              class="default articles-link"
+              src="../images/buttons/articles.gif"
+              alt="Published Articles"
+            />
+            <img
+              class="over articles-link"
+              src="../images/buttons/articles_over.gif"
+              alt="Published Articles"
+            />
+          </a>
+          <a href="credits.html">
+            <img
+              class="default"
+              src="../images/buttons/credits.gif"
+              alt="Credits"
+            />
+            <img
+              class="over"
+              src="../images/buttons/credits_over.gif"
+              alt="Credits"
+            />
+          </a>
+          <a href="FHPS.html">
+            <img class="default" src="../images/buttons/FHPS.gif" alt="FHPS" />
+            <img
+              class="over"
+              src="../images/buttons/FHPS_over.gif"
+              alt="FHPS"
+            />
+          </a>
+          <a href="links.html">
+            <img
+              class="default"
+              src="../images/buttons/links.gif"
+              alt="Links"
+            />
+            <img
+              class="over"
+              src="../images/buttons/links_over.gif"
+              alt="Links"
+            />
+          </a>
+          <a href="mission.html">
+            <img
+              class="default"
+              src="../images/buttons/mission.gif"
+              alt="Our Mission"
+            />
+            <img
+              class="over"
+              src="../images/buttons/mission_over.gif"
+              alt="Our Mission"
+            />
+          </a>
+        </div>
+      </div>
 
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
+      <div class="nav-under">
+        <div class="under-left">
+          <img src="../images/graphic_under_left.png" />
+        </div>
+        <div class="under-right">
+          <img src="../images/graphic_under_right.png" />
+        </div>
+      </div>
+    </div>
 
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
+    <div class="page-content">
+      <table cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tbody>
+          <tr>
+            <td width="100%" height="100%" valign="top">
+              <img
+                src="../images/black_issues_title.jpg"
+                alt="Biomedical Research Warfare"
+                height="220"
+                width="387"
+              />
+              <img
+                src="../images/bioresearch.jpg"
+                alt=""
+                height="600"
+                width="471"
+              />
+              <p><strong>By Leigh Fortson</strong></p>
+              <p>
+                When Patrick Allen, Ph.D., was awarded a $1.2 million grant from
+                the National Institutes of Health (NIH) to define the structure
+                of the AIDS virus, he didn't know that only 0.37 percent of
+                biomedical research funds were given to black scientists. Upon
+                reflection, however, Allen found that the startlingly low
+                percentage was consistent with his personal experiences.
+                Throughout his undergraduate years at Springfield College in
+                Massachusetts and his graduate studies at the University of
+                California-Santa Cruz, and now as a postdoctoral fellow and
+                research associate at the University of Colorado-Boulder, time
+                and time again, Allen was and is the only black person in the
+                lab.
+              </p>
+              <p>
+                At first, being the minority in an industry that's traditionally
+                dominated by white men didn't faze him. But the news of so few
+                black investigators being funded for scientific research did
+                disturb him. Allen already knew about the higher-than-average
+                incidence of heart disease, diabetes, high blood sugar and high
+                blood cholesterol among black Americans. (See "Black Health
+                Facts," p. 26.) But when the numbers from the Centers for
+                Disease Control and Prevention revealed that nearly 75 percent
+                of all deaths from AIDS occur in black men; that black women
+                have the disease at a rate that is 16 times that of white women;
+                and that two-thirds of all children with HIV are black, Allen
+                realized there was a health crisis in black America and that
+                called for immediate action.
+              </p>
+              <p>
+                "I never dreamed this would be a concern of mine," Allen says.
+                "But when I think about so few blacks involved in AIDS research,
+                and so many blacks who are affected by it, that polarity got me
+                going."
+              </p>
+              <p>
+                And Allen, 38, has been going strong around the country
+                promoting a new health consciousness in the black community.
+                "Black people are in bad health, and it's not necessary. Health
+                consciousness and caring about your body is not that difficult.
+                And it's not asking a lot," says Allen, who launched the Black
+                Biomedical Research Movement (BBRM), a non-profit organization
+                set up through the University of Colorado. This is his attempt
+                to encourage young black students to enter the field of
+                biomedical research, while also forging a new mindset in
+                minority communities to take responsibility for their own health
+                and well-being.
+              </p>
+              <p>
+                It is bound to be a tough challenge, but Allen has faced down
+                fierce opponents before. Born and raised in Jamaica, he always
+                loved school because good grades got him the attention he
+                liked-not only from family members-but from peers as well. A
+                move to New York at age 13 changed everything. Being attentive
+                in the classroom, finishing homework on time, and exemplary
+                report cards cast him as the resident nerd. By high school, he
+                figured out that the American way of attracting attention was
+                through athletics.
+              </p>
+              <p>
+                Allen took up wrestling and excelled. By college, he was
+                competing in national tournaments and eventually was invited to
+                the 1984 Olympic trials. Fortuitously, a knee injury put an end
+                to his wrestling career, so he turned to biology.
+              </p>
+              <p>
+                Patrick Allen, Ph.D., realized there was a health crisis in
+                black America. "...when I think about so few blacks involved in
+                AIDS research, and so many blacks who are affected by it, that
+                polarity got me going."'
+              </p>
+              <p>
+                Allen credits his years as a serious wrestler for the discipline
+                he now relies upon as a serious scientist.
+              </p>
+              <p>
+                "Science isn't glamorous," he says. "You have to be rigorous,
+                you have to have discipline, you have to do things meticulously
+                and sometimes nothing happens. Wrestling helped me learn those
+                things."
+              </p>
+              <p>
+                As one of relatively few black biomedical researchers wrestling
+                with the AIDS virus, Allen splits his energy between exploring
+                what inhibits the destructive properties of the virus (he was
+                awarded a patent in 1997 for a discovery he made to that
+                effect), and what contributes to the health crisis in black
+                America. He sees a clear connection between the magnitude of the
+                health crisis and the dearth of black scientists and biomedical
+                researchers. In fact, he emphasizes, the crisis may be more
+                about mistrust and fear than viruses, heart disease, or blood
+                abnormalities.
+              </p>
+              <p>
+                "It's beyond me how to forge a new consciousness," he admits.
+                "But just because it's beyond you, doesn't mean you can't do
+                something about it."
+              </p>
+              <p>
+                Allen believes a cultural and historic mistrust of science and
+                medicine must be overcome before African Americans can obviate
+                the growing statistics that reflect the poor health of their
+                race. To assist him in this crusade, he is enlisting the support
+                of celebrities, athletes and musicians (including film director
+                Spike Lee and Denver Bronco's running back Terrell Davis) to
+                contribute money, become spokespersons, or disseminate accurate
+                information about the crisis through their work and their
+                community outreach.
+              </p>
+              <p>
+                He is also pursuing support from traditional biomedical research
+                funders. In 1999, the Office of AIDS Research at NIH became a
+                benefactor of the BBRM. One of the institutes' first gestures of
+                support to the BBRM was to underwrite Allen's participation in a
+                reggae concert that he co-produced in Negril, Jamaica, in April
+                1999, which featured musicians who promoted awareness of how
+                AIDS has infiltrated the black community. As an added bonus, the
+                DuPont Corp. and the NAACP [National Association for the
+                Advancement of Colored People], joined together to donate 10,000
+                condoms to the mostly college-aged music lovers on spring break
+                who attended the concert.
+              </p>
+              <p>
+                While Allen is going straight to the masses with his message, he
+                also has been negotiating with U.S. Surgeon General Dr. David
+                Satcher and Secretary of Health and Human Services Donna Shalaia
+                about holding symposiums aimed at heightening awareness.
+                Although collaborating with these political entities is a
+                time-consuming process, Allen feels that their participation is
+                critical to manifesting a past-due wake-up call for all
+                Americans.
+              </p>
+              <table
+                cellpadding="3"
+                cellspacing="0"
+                hspace="5"
+                vspace="3"
+                width="300"
+              >
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Black Healtlh facts</p>
+                      <img
+                        src="http://web.archive.org/web/20030627050209/http://www.bbrm.org/articles/images/np_image2.jpg"
+                        alt=""
+                        height="171"
+                        width="143"
+                      />
+                      <p></p>
+                      <ul>
+                        <li>
+                          Approximately 33 percent of black men die of
+                          cardiovascular disease compared to 5.5 percent who die
+                          from homicide. Cardiovascular disease is the leading
+                          cause of death in black men and women.
+                        </li>
+                        <li>
+                          Seventy-five percent of all deaths from AIDS occur in
+                          black men.
+                        </li>
+                        <li>
+                          Black women have AIDS at 16 times the rate of white
+                          women, and two-thirds of all children with HIV are
+                          black.
+                        </li>
+                        <li>
+                          For fiscal year 1997, the budget for research programs
+                          at the National Cancer Institute (NCI) relevant to
+                          minorities was aproximately 1 percent of the total NCI
+                          budget.
+                        </li>
+                        <li>
+                          According to the Healthy People 2000 federal
+                          initiative, the cancer death rate of African Americans
+                          had already exceeded the year 2000 target of 175
+                          deaths by reaching 172 deaths per 100,000 in 1995.
+                        </li>
+                        <li>
+                          In 1995, only 2.8 percent of all biological scientists
+                          were black.
+                        </li>
+                      </ul>
+                      <br />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>One of Too Few Fighting the Problem</p>
+              <p>
+                While he is one of few black biomedical researchers who've found
+                the time and the resources to take on the challenge of improving
+                black health, Allen certainly is not the only person attempting
+                to counter these alarming trends.
+              </p>
+              <p>
+                Healthy People 2000 and 2010 are federal initiatives that also
+                aim to improve minority health.
+              </p>
+              <p>
+                Emerging from the secretary of Health and Human Services office
+                in 1990, the goals of Healthy People 2000 included reducing
+                health disparities among minorities. The updated version of the
+                program, Healthy People 2010, has the goal of eliminating health
+                disparities. Numerous calls to Healthy People 2000 for more
+                details about the project were not returned.
+              </p>
+              <p>
+                Then there is the NIH's Office of Research on Minority Health
+                (ORMH), the mission of which is to improve health among
+                minorities.
+              </p>
+              <p>
+                "[ORMH realizes that] minority Americans are not fully
+                benefiting from the advances made in biomedical research," Allen
+                says. Consequently, they have implemented an array of programs
+                to "improve the health of minorities across their life span."
+              </p>
+              <p>
+                Although he appreciates whafs being done in the context of these
+                government-launched initiatives, Allen finds it hard to believe
+                these goals will be met if the majority of black Americans
+                aren't aware that the problem exists, or how grave it is.
+              </p>
+              <p>
+                Without widespread public confidence in science and medicine, as
+                well as simple knowledge of the initiatives, he says, it will be
+                impossible to reach most of those goals.
+              </p>
+              <p>
+                Reclaiming the health of millions of Americans is as important
+                as defeating other problems facing minorities such as escalating
+                incarceration rates, infant mortality, teen pregnancy, drug
+                abuse and poverty, Allen says. But before health becomes a
+                priority, he believes African Americans must commit to
+                themselves and to their community that they will participate in
+                whatever it takes to be healthy.
+              </p>
+              <p>
+                "Today, [HIV is] predominately a black disease, and you have the
+                black community and the church not owning up to the fact that
+                it's decimating our community," he says.
+              </p>
+              <p>
+                Apriel Hodari, a graduate student in physics at the University
+                of Maryland and a recipient of a National Science Foundation
+                fellowship, agrees with Allen. She volunteered at the Children's
+                AIDS Network Designed for Interface Involvement in Virginia and
+                was astounded that the overwhelming majority of people who came
+                for service were black mothers and children. And yet, when she
+                launched a program to recruit other volunteers, she was
+                successful in signing up only two black women. All the rest were
+                middle-aged white women.
+              </p>
+              <p>
+                "Generally, people don't act like AIDS is an issue for black
+                women," she says. "So as a minority scientist, I really support
+                what Dr. Allen is doing."
+              </p>
+              <p>
+                So does Deborah Fontaine, African American Outreach program
+                director of AIDS Atlanta. "We need to put a new face on AIDS.
+                Most people think of someone gay, a prostitute or drug addict.
+                They don't think of a 53-year-old black woman, who has been
+                monogamous with someone for 10 years, doesn't practice safe sex
+                once with someone else and acquires the disease. Nor do they
+                think of a young black girl who gets it the very first time she
+                has sex. When it comes to HIV, the black community is very
+                judgmental and homophobic, and they simply don't know what's
+                really going on because of a lack of education that's culturally
+                geared into the black community."
+              </p>
+              <p>
+                When I tell black people I am a biomedical ressearcher, I hear
+                them say, 'You don't see many brothers doing that. How'd you get
+                into that? ...' <br />
+              </p>
+              <div>- Patrick Allen</div>
+              <p>Expanding the Black Researcher Population</p>
+              <p>
+                Allen and other black researchers theorize that if more black
+                researchers are conducting clinical trials for new drugs or
+                procedures, then more minorities will be inclined to participate
+                in the studies. And participation in those clinical trials, he
+                emphasizes, is critical to the understanding and treatment of
+                the health problems unique to African Americans.
+              </p>
+              <p>
+                A spokesperson at the Office of AIDS Research at the NIH who
+                requested anonymity says that their agency has put "significant
+                time and energy into increasing enrollment of minority
+                representation in such tests." In fact, she says the relative
+                number of participants in most studies is comparable to the
+                percentage of minorities who suffer from the diseases. "It's
+                something we've taken very seriously for a long time."
+              </p>
+              <p>
+                And Clifton Poodry, director of the Minority Opportunities in
+                Research Program at the NIH, says attempts to recruit young
+                minority scientists have been in place for 20 years. Poodry's
+                office created programs that include providing funding for
+                minority students to go into research-oriented institutions,
+                improving research skills of faculty at minority-serving
+                institutions, and developing infrastructures at minority
+                research institutions.
+              </p>
+              <p>
+                "There are many success stories that come out of these programs,
+                but the overall numbers of minority students entering a
+                scientific or research-based career are the same as they were
+                before. This worries us," admits Poodry, who believes that the
+                poor economics of so many minorities has a lot to do with why so
+                few enter the field.
+              </p>
+              <p>Allen disagrees.</p>
+              <p>
+                "This lack of relationship between the black community and
+                health consciousness is not something you can escape by becoming
+                educated or wealthy, like you might be able to with crime or
+                drugs. This is something that affects all black people," he
+                says. Taking it a step further, he continues:
+              </p>
+              <p>
+                "When I tell black people I'm a biomedical researcher, I hear
+                them say, 'You don't see many brothers doing that. How'd you get
+                into that?'"
+              </p>
+              <p>
+                He links those questions with the underlying mistrust that
+                distracts young black students regardless of their economic
+                background from pursuing medical research. Although he
+                recognizes and appreciates that many of the black students who
+                do study science gravitate to medical school, he believes it is
+                equally as important to encourage students to choose a career in
+                research.
+              </p>
+              <p>
+                "By their senior year, students hit this tradition of mistrust
+                and get messages like, 'Come on, you're the only black. Why are
+                you going into this?' That's when they choose medical school
+                instead."
+              </p>
+              <p>
+                Allen plans to use the BBRM to turn the tide concerning
+                research. He has already secured a half-dozen commitments from
+                prize-winning, heavily funded scientists to serve as mentors to
+                talented, young black science students to be selected from
+                existing science programs. One such program is The College
+                Fund/UNCF-Merek Science Initiative, which steers black students
+                toward research through internships with the pharmaceutical and
+                research giant, Merck &amp; Co.
+              </p>
+              <p>
+                Jerry Bryant, director of The College Fund/UNCF-Merek
+                Initiative, applauds Allen's efforts and shares his goal of
+                drawing black science students away from the medical profession
+                into research.
+              </p>
+              <p>
+                "[Students] know what getting an M.D. is," says Bryant. "But
+                they don't know how to develop research in a novel area no one
+                has ever studied before, and that's kind of scary." Allen and
+                Bryant agree that exposing students to the unknown research
+                environment will not only spark new interest in the field but
+                understanding as well.
+              </p>
+              <p>
+                Allen believes that black and minority communities are
+                disenfranchised from biomedical research, and the attitude that
+                results from that is: "We're suspicious - we're afraid we're
+                going to be used as guinea pigs."
+              </p>
+              <p>
+                This, Allen is well aware, has been the case in the past.
+                Between 1932 and 1972, the so-called Tuskegee experiments denied
+                black men with syphilis effective drug therapy. In 1997,
+                President Clinton formally apologized for the wrongful
+                experiments. In 1998, the Congressional Black Caucus declared a
+                state of emergency in protest to them. 'Mat same year, President
+                Clinton dedicated $156 million in honor of the crisis to
+                research, prevention and treatment of HIV and AIDS in the
+                African-American community.
+              </p>
+              <p>
+                With this history and with questionable research still being
+                conducted, how can Allen confidently encourage people of color
+                to engage in more clinical testing of new drugs?
+              </p>
+              <p>He looks to the women's movement for part of the answer.</p>
+              <p>
+                "Women now trust science more than they did 20 years ago because
+                they got involved in their own wellbeing. There are lots more
+                women in science now. And there are seminars, classes, support
+                groups, magazines and books written just for women and the
+                issues unique to them because there was a need for them to come
+                together and take responsibility for what was happening.
+              </p>
+              <p>
+                "In the same way, the more blacks that get into science and
+                research, the more trust will be established, and then more
+                positive changes can be accomplished. If you're serious about
+                minority health issues, then we need a campaign. We need to put
+                this issue to the forefront and make sure its sustained over the
+                next 20 years."
+              </p>
+              <p>
+                Most people agree awareness and outreach are critical if
+                profound change in the health of minorities is to occur. Poodry,
+                for one, believes that Allen's passion and commitment to
+                improving the health of the black community is important and
+                admirable. But, Poodry reluctantly admits that he's afraid the
+                energy Allen is spending on the movement to increase awareness
+                is taking away from his research as a talented and promising
+                scientist.
+              </p>
+              <p>
+                "There are so few minority scientists that can get competitive
+                funding (such as the NIH grant). He shouldn't have to be doing
+                the outreach. It's a shame that he feels he has to because no
+                one else is."
+              </p>
+              <p>
+                Allen's response to this concern, which is echoed from other
+                colleagues, is sadness.
+              </p>
+              <p>
+                "It hurts me to hear that I love science, and I don't want to
+                disappoint my mentors and the people who believe in me," he
+                says. After a pause, he concludes with, 'But how do you measure
+                publishing two papers a year compared to starting a movement
+                that could change the consciousness of people?"
+              </p>
+              <p>
+                This may indeed be the most difficult wrestling match of his
+                life.
+              </p>
+              <p>
+                <strong
+                  >Leigh Fortson is a freelance writer whose expertise includes
+                  health and alternative medicine. This article, which first
+                  appeared in the March 18, 1999, edition of Black Issues in
+                  Higher Education, is reprinted with permission</strong
+                >
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
+    <script>
+      // Open mobile navigation overlay
+      const openNav = () => {
+        $("#nav-open").hide();
+        $("#nav-close").show();
+        $("#mobile-overlay").css("display", "flex");
+        $("#nav-logo").show();
+        $("body").css("overflow-y", "hidden");
+      };
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
-</script>
+      // Close navigation overlay
+      const closeNav = () => {
+        $("#nav-open").show();
+        $("#nav-close").hide();
+        $("#mobile-overlay").hide();
+        $("#nav-logo").hide();
+        $("body").css("overflow-y", "auto");
+      };
 
-<style type="text/css">
-<!--
-.style1 {
-	font-size: 18px;
-	font-weight: bold;
-}
--->
-</style>
-</head><body onLoad="FP_preloadImgs('images/btn_home_over.gif', 'images/btn_comm_support_over.gif', 'images/btn_join_bbrm_over.gif', 'images/btn_articles_over.gif', 'images/btn_credits.gif', 'images/btn_FHPS_over.gif', 'images/btn_links_over.gif', 'images/btn_mission_over.gif', 'images/btn_credits_over.gif')" topmargin="0" leftmargin="0">
-
-
-	  
-		<table id="table2" cellpadding="0" cellspacing="0" height="718" width="100%">
-			<!-- MSTableType="layout" --><tbody><tr>
-				<td rowspan="3" bgcolor="#ffffff" valign="top">
-				<img src="../images/graphic_corner.gif" border="0" height="140" width="267"></td>
-				<td colspan="2" background="../images/red_gradation.gif" height="29" valign="top"><a href="../index.html"><img border="0" src="../images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','../images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../support.html"><img border="0" src="../images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','../images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../join.html"><img border="0" src="../images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','../images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="../images/red_gradation.gif" width="31" height="29"></td>
-			</tr>
-			<tr>
-				<td height="1"></td>
-				<td rowspan="2" bordercolor="#FFFFFF" align="right" bgcolor="#ffffff" valign="top">
-				<img src="../images/logo_bbrm.jpg" border="0" height="104" width="133"></td>
-			</tr>
-			<tr>
-				<td bordercolor="#FFFFFF" bgcolor="#ffffff" height="110" valign="top">
-				<img src="../images/graphic_mid_logotype.gif" border="0" height="110" width="384"></td>
-			</tr>
-			<tr>
-				<td colspan="3" background="../images/green_gradation.gif" height="18" valign="top"><a href="../articles.html"><img src="../images/btn_articles.gif" name="img4" width="160" height="18" border="0" id="img4" onMouseOver="FP_swapImg(1,1,/*id*/'img4','../images/btn_articles_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../credits.html"><img src="../images/btn_credits.gif" name="img5" width="66" height="18" border="0" id="img5" onMouseOver="FP_swapImg(1,1,/*id*/'img5','../images/btn_credits_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../FHPS.html"><img src="../images/btn_FHPS.gif" name="img6" width="47" height="18" border="0" id="img6" onMouseOver="FP_swapImg(1,1,/*id*/'img6','../images/btn_FHPS_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../links.html"><img src="../images/btn_links.gif" name="img7" width="47" height="18" border="0" id="img7" onMouseOver="FP_swapImg(1,1,/*id*/'img7','../images/btn_links_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../mission.html"><img src="../images/btn_mission.gif" name="img8" width="92" height="18" border="0" id="img8" onMouseOver="FP_swapImg(1,1,/*id*/'img8','../images/btn_mission_over.gif')" onMouseOut="FP_swapImgRestore()"></a></td>
-			</tr>
-			<tr>
-				<td valign="top">
-				<img src="../images/graphic_feat_all_white.gif" border="0" height="72" width="267"></td>
-				<td height="73" valign="top">
-				<img src="../images/graphic_under_curve.gif" border="0" height="54" width="405"></td>
-				<td rowspan="2" valign="top"><!-- MSCellType="empty" -->&nbsp;</td>
-			</tr>
-			
-			<tr>
-			  <td valign="top">&nbsp;			    </td>
-				<td height="444" valign="top">
-				<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
-					<!-- MSCellFormattingTableID="2" -->
-					<tbody><tr>
-						<td width="100%" height="100%" valign="top"><!-- MSCellFormattingType="content" -->                        <!-- InstanceBeginEditable name="EditRegion3" -->
-						  <center>
-						    <img src="../images/black_issues_title.jpg" alt="Biomedical Research Warfare" border="0" height="220" width="387">
-					      </center>
-						  <center>
-						    <img src="../images/bioresearch.jpg" alt="" border="0" height="600" width="471">
-					      </center>
-						  <p><strong>By Leigh Fortson</strong></p>
-						  <p>When Patrick Allen, Ph.D., was awarded a $1.2  million grant from the National Institutes of Health (NIH) to define  the structure of the AIDS virus, he didn't know that only 0.37 percent  of biomedical research funds were given to black scientists. Upon  reflection, however, Allen found that the startlingly low percentage  was consistent with his personal experiences. Throughout his  undergraduate years at Springfield College in Massachusetts and his  graduate studies at the University of California-Santa Cruz, and now as  a postdoctoral fellow and research associate at the University of  Colorado-Boulder, time and time again, Allen was and is the only black  person in the lab. </p>
-						  <p>At first, being the minority in an industry  that's traditionally dominated by white men didn't faze him. But the  news of so few black investigators being funded for scientific research  did disturb him. Allen already knew about the higher-than-average  incidence of heart disease, diabetes, high blood sugar and high blood  cholesterol among black Americans. (See "Black Health Facts," p. 26.)  But when the numbers from the Centers for Disease Control and  Prevention revealed that nearly 75 percent of all deaths from AIDS  occur in black men; that black women have the disease at a rate that is  16 times that of white women; and that two-thirds of all children with  HIV are black, Allen realized there was a health crisis in black  America and that called for immediate action.</p>
-						  <p>"I never dreamed this would be a concern of  mine," Allen says. "But when I think about so few blacks involved in  AIDS research, and so many blacks who are affected by it, that polarity  got me going." </p>
-						  <p>And Allen, 38, has been going strong around the  country promoting a new health consciousness in the black community.  "Black people are in bad health, and it's not necessary. Health  consciousness and caring about your body is not that difficult. And  it's not asking a lot," says Allen, who launched the Black Biomedical  Research Movement (BBRM), a non-profit organization set up through the  University of Colorado. This is his attempt to encourage young black  students to enter the field of biomedical research, while also forging  a new mindset in minority communities to take responsibility for their  own health and well-being. </p>
-						  <p>It is bound to be a tough challenge, but Allen  has faced down fierce opponents before. Born and raised in Jamaica, he  always loved school because good grades got him the attention he  liked-not only from family members-but from peers as well. A move to  New York at age 13 changed everything. Being attentive in the  classroom, finishing homework on time, and exemplary report cards cast  him as the resident nerd. By high school, he figured out that the  American way of attracting attention was through athletics.</p>
-						  <p>Allen took up wrestling and excelled. By  college, he was competing in national tournaments and eventually was  invited to the 1984 Olympic trials. Fortuitously, a knee injury put an  end to his wrestling career, so he turned to biology. </p>
-						  <p>Patrick Allen, Ph.D., realized there was a health  crisis in black America. "...when I think about so few blacks involved  in AIDS research, and so many blacks who are affected by it, that  polarity got me going."' </p>
-                          <p>Allen credits his years as a serious wrestler for the discipline he now relies upon as a serious scientist. </p>
-                          <p>"Science isn't glamorous," he says. "You have to  be rigorous, you have to have discipline, you have to do things  meticulously and sometimes nothing happens. Wrestling helped me learn  those things." </p>
-                          <p>As one of relatively few black biomedical  researchers wrestling with the AIDS virus, Allen splits his energy  between exploring what inhibits the destructive properties of the virus  (he was awarded a patent in 1997 for a discovery he made to that  effect), and what contributes to the health crisis in black America. He  sees a clear connection between the magnitude of the health crisis and  the dearth of black scientists and biomedical researchers. In fact, he  emphasizes, the crisis may be more about mistrust and fear than  viruses, heart disease, or blood abnormalities.</p>
-                          <p>"It's beyond me how to forge a new  consciousness," he admits. "But just because it's beyond you, doesn't  mean you can't do something about it." </p>
-                          <p>Allen believes a cultural and historic mistrust  of science and medicine must be overcome before African Americans can  obviate the growing statistics that reflect the poor health of their  race. To assist him in this crusade, he is enlisting the support of  celebrities, athletes and musicians (including film director Spike Lee  and Denver Bronco's running back Terrell Davis) to contribute money,  become spokespersons, or disseminate accurate information about the  crisis through their work and their community outreach. </p>
-                          <p>He is also pursuing support from traditional  biomedical research funders. In 1999, the Office of AIDS Research at  NIH became a benefactor of the BBRM. One of the institutes' first  gestures of support to the BBRM was to underwrite Allen's participation  in a reggae concert that he co-produced in Negril, Jamaica, in April  1999, which featured musicians who promoted awareness of how AIDS has  infiltrated the black community. As an added bonus, the DuPont Corp.  and the NAACP [National Association for the Advancement of Colored  People], joined together to donate 10,000 condoms to the mostly  college-aged music lovers on spring break who attended the concert.</p>
-                          <p>While Allen is going straight to the masses with  his message, he also has been negotiating with U.S. Surgeon General Dr.  David Satcher and Secretary of Health and Human Services Donna Shalaia  about holding symposiums aimed at heightening awareness. Although  collaborating with these political entities is a time-consuming  process, Allen feels that their participation is critical to  manifesting a past-due wake-up call for all Americans. </p>
-                          <table align="left" bgcolor="#990000" border="0" cellpadding="3" cellspacing="0" hspace="5" vspace="3" width="300">
-                            <tbody>
-                              <tr>
-                                <td><p align="center">Black Healtlh facts</p>
-                                    <center>
-                                      <img src="http://web.archive.org/web/20030627050209/http://www.bbrm.org/articles/images/np_image2.jpg" alt="" border="0" height="171" width="143">
-                                    </center>
-                                  <p> </p>
-                                  <ul>
-                                      <li> Approximately 33 percent of black  men die of cardiovascular disease compared to 5.5 percent who die from  homicide. Cardiovascular disease is the leading cause of death in black  men and women. </li>
-                                    <li> Seventy-five percent of all deaths from AIDS occur in black men. </li>
-                                    <li> Black women have AIDS at 16 times the rate of white women, and two-thirds of all children with HIV are black. </li>
-                                    <li> For fiscal year 1997, the budget for research programs at the National  Cancer Institute (NCI) relevant to minorities was aproximately 1  percent of the total NCI budget. </li>
-                                    <li> According to the Healthy People 2000 federal initiative, the cancer  death rate of African Americans had already exceeded the year 2000  target of 175 deaths by reaching 172 deaths per 100,000 in 1995. </li>
-                                    <li> In 1995, only 2.8 percent of all biological scientists were black. </li>
-                                  </ul>
-                                  <br>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <p>One of Too Few Fighting the Problem</p>
-                          <p>While he is one of few black biomedical  researchers who've found the time and the resources to take on the  challenge of improving black health, Allen certainly is not the only  person attempting to counter these alarming trends. </p>
-                          <p>Healthy People 2000 and 2010 are federal initiatives that also aim to improve minority health. </p>
-                          <p>Emerging from the secretary of Health and Human  Services office in 1990, the goals of Healthy People 2000 included  reducing health disparities among minorities. The updated version of  the program, Healthy People 2010, has the goal of eliminating health  disparities. Numerous calls to Healthy People 2000 for more details  about the project were not returned. </p>
-                          <p>Then there is the NIH's Office of Research on  Minority Health (ORMH), the mission of which is to improve health among  minorities. </p>
-                          <p>"[ORMH realizes that] minority Americans are not  fully benefiting from the advances made in biomedical research," Allen  says. Consequently, they have implemented an array of programs to  "improve the health of minorities across their life span." </p>
-                          <p>Although he appreciates whafs being done in the  context of these government-launched initiatives, Allen finds it hard  to believe these goals will be met if the majority of black Americans  aren't aware that the problem exists, or how grave it is. </p>
-                          <p>Without widespread public confidence in science  and medicine, as well as simple knowledge of the initiatives, he says,  it will be impossible to reach most of those goals.</p>
-                          <p>Reclaiming the health of millions of Americans  is as important as defeating other problems facing minorities such as  escalating incarceration rates, infant mortality, teen pregnancy, drug  abuse and poverty, Allen says. But before health becomes a priority, he  believes African Americans must commit to themselves and to their  community that they will participate in whatever it takes to be healthy.</p>
-                          <p>"Today, [HIV is] predominately a black disease,  and you have the black community and the church not owning up to the  fact that it's decimating our community," he says.</p>
-                          <p>Apriel Hodari, a graduate student in physics at  the University of Maryland and a recipient of a National Science  Foundation fellowship, agrees with Allen. She volunteered at the  Children's AIDS Network Designed for Interface Involvement in Virginia  and was astounded that the overwhelming majority of people who came for  service were black mothers and children. And yet, when she launched a  program to recruit other volunteers, she was successful in signing up  only two black women. All the rest were middle-aged white women. </p>
-                          <p>"Generally, people don't act like AIDS is an  issue for black women," she says. "So as a minority scientist, I really  support what Dr. Allen is doing."</p>
-                          <p>So does Deborah Fontaine, African American  Outreach program director of AIDS Atlanta. "We need to put a new face  on AIDS. Most people think of someone gay, a prostitute or drug addict.  They don't think of a 53-year-old black woman, who has been monogamous  with someone for 10 years, doesn't practice safe sex once with someone  else and acquires the disease. Nor do they think of a young black girl  who gets it the very first time she has sex. When it comes to HIV, the  black community is very judgmental and homophobic, and they simply  don't know what's really going on because of a lack of education that's  culturally geared into the black community." </p>
-                          <p>When I tell black people I am a biomedical  ressearcher, I hear them say, 'You don't see many brothers doing that.  How'd you get into that? ...' <br>
-                          </p>
-                          <div align="right">- Patrick Allen</div>
-                          <p>Expanding the Black Researcher Population</p>
-                          <p>Allen and other black researchers theorize that  if more black researchers are conducting clinical trials for new drugs  or procedures, then more minorities will be inclined to participate in  the studies. And participation in those clinical trials, he emphasizes,  is critical to the understanding and treatment of the health problems  unique to African Americans. </p>
-                          <p>A spokesperson at the Office of AIDS Research at  the NIH who requested anonymity says that their agency has put  "significant time and energy into increasing enrollment of minority  representation in such tests." In fact, she says the relative number of  participants in most studies is comparable to the percentage of  minorities who suffer from the diseases. "It's something we've taken  very seriously for a long time." </p>
-                          <p>And Clifton Poodry, director of the Minority  Opportunities in Research Program at the NIH, says attempts to recruit  young minority scientists have been in place for 20 years. Poodry's  office created programs that include providing funding for minority  students to go into research-oriented institutions, improving research  skills of faculty at minority-serving institutions, and developing  infrastructures at minority research institutions. </p>
-                          <p>"There are many success stories that come out of  these programs, but the overall numbers of minority students entering a  scientific or research-based career are the same as they were before.  This worries us," admits Poodry, who believes that the poor economics  of so many minorities has a lot to do with why so few enter the field. </p>
-                          <p>Allen disagrees. </p>
-                          <p>"This lack of relationship between the black  community and health consciousness is not something you can escape by  becoming educated or wealthy, like you might be able to with crime or  drugs. This is something that affects all black people," he says.  Taking it a step further, he continues:</p>
-                          <p>"When I tell black people I'm a biomedical  researcher, I hear them say, 'You don't see many brothers doing that.  How'd you get into that?'"</p>
-                          <p>He links those questions with the underlying  mistrust that distracts young black students regardless of their  economic background from pursuing medical research. Although he  recognizes and appreciates that many of the black students who do study  science gravitate to medical school, he believes it is equally as  important to encourage students to choose a career in research.</p>
-                          <p>"By their senior year, students hit this  tradition of mistrust and get messages like, 'Come on, you're the only  black. Why are you going into this?' That's when they choose medical  school instead."</p>
-                          <p>Allen plans to use the BBRM to turn the tide  concerning research. He has already secured a half-dozen commitments  from prize-winning, heavily funded scientists to serve as mentors to  talented, young black science students to be selected from existing  science programs. One such program is The College Fund/UNCF-Merek  Science Initiative, which steers black students toward research through  internships with the pharmaceutical and research giant, Merck &amp; Co.</p>
-                          <p>Jerry Bryant, director of The College  Fund/UNCF-Merek Initiative, applauds Allen's efforts and shares his  goal of drawing black science students away from the medical profession  into research.</p>
-                          <p>"[Students] know what getting an M.D. is," says  Bryant. "But they don't know how to develop research in a novel area no  one has ever studied before, and that's kind of scary." Allen and  Bryant agree that exposing students to the unknown research environment  will not only spark new interest in the field but understanding as well.</p>
-                          <p>Allen believes that black and minority  communities are disenfranchised from biomedical research, and the  attitude that results from that is: "We're suspicious - we're afraid  we're going to be used as guinea pigs." </p>
-                          <p>This, Allen is well aware, has been the case in  the past. Between 1932 and 1972, the so-called Tuskegee experiments  denied black men with syphilis effective drug therapy. In 1997,  President Clinton formally apologized for the wrongful experiments. In  1998, the Congressional Black Caucus declared a state of emergency in  protest to them. 'Mat same year, President Clinton dedicated $156  million in honor of the crisis to research, prevention and treatment of  HIV and AIDS in the African-American community.</p>
-                          <p>With this history and with questionable research  still being conducted, how can Allen confidently encourage people of  color to engage in more clinical testing of new drugs?</p>
-                          <p>He looks to the women's movement for part of the answer.</p>
-                          <p>"Women now trust science more than they did 20  years ago because they got involved in their own wellbeing. There are  lots more women in science now. And there are seminars, classes,  support groups, magazines and books written just for women and the  issues unique to them because there was a need for them to come  together and take responsibility for what was happening.</p>
-                          <p>"In the same way, the more blacks that get into  science and research, the more trust will be established, and then more  positive changes can be accomplished. If you're serious about minority  health issues, then we need a campaign. We need to put this issue to  the forefront and make sure its sustained over the next 20 years." </p>
-                          <p>Most people agree awareness and outreach are  critical if profound change in the health of minorities is to occur.  Poodry, for one, believes that Allen's passion and commitment to  improving the health of the black community is important and admirable.  But, Poodry reluctantly admits that he's afraid the energy Allen is  spending on the movement to increase awareness is taking away from his  research as a talented and promising scientist.</p>
-                          <p>"There are so few minority scientists that can  get competitive funding (such as the NIH grant). He shouldn't have to  be doing the outreach. It's a shame that he feels he has to because no  one else is."</p>
-                          <p>Allen's response to this concern, which is echoed from other colleagues, is sadness.</p>
-                          <p>"It hurts me to hear that I love science, and I  don't want to disappoint my mentors and the people who believe in me,"  he says. After a pause, he concludes with, 'But how do you measure  publishing two papers a year compared to starting a movement that could  change the consciousness of people?"</p>
-                          <p>This may indeed be the most difficult wrestling match of his life.</p>
-                          <p><strong>Leigh Fortson is a freelance writer whose expertise  includes health and alternative medicine. This article, which first  appeared in the March 18, 1999, edition of Black Issues in Higher  Education, is reprinted with permission</strong></p>
-						  <p class="style1">&nbsp;</p>
-						  </td>
-					</tr>
-				</tbody></table>				</td>
-			</tr>
-		</tbody></table>
-
-	</body>
+      // Set up navigation onclicks
+      $("#nav-open").click(openNav);
+      $("#nav-close").click(closeNav);
+    </script>
+  </body>
 </html>

@@ -1,145 +1,348 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BBRM</title>
 
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../images/icons/safari-pinned-tab.svg"
+      color="#006500"
+    />
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="BBRM" />
+    <meta name="application-name" content="BBRM" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="../images/icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script
+      defer
+      data-domain="bbrm.org"
+      src="https://stats.dallen.dev/js/script.js"
+    ></script>
 
-<title>BBRM</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+    ></script>
+  </head>
 
-<script language="JavaScript">
-<!--
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+  <body>
+    <div id="mobile-overlay">
+      <div id="nav-logo">
+        <img src="../images/logo_bbrm.png" />
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="join.html">Join</a>
+        <a href="articles.html">Published Articles</a>
+        <a href="credits.html">Credits</a>
+        <a href="FHPS.html">FHPS</a>
+        <a href="links.html">Links</a>
+        <a href="mission.html">Our Mission</a>
+      </div>
+    </div>
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+    <div id="nav-open">
+      <img src="../images/buttons/menu.svg" width="32" height="32" />
+    </div>
+    <div id="nav-close">
+      <img src="../images/buttons/close.svg" width="32" height="32" />
+    </div>
 
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
+    <div class="nav">
+      <div class="primary-nav">
+        <div class="banner-left">
+          <img src="../images/graphic_corner.png" />
+        </div>
+        <div class="nav-fill">
+          <div class="primary-links">
+            <a href="index.html">
+              <img
+                class="default"
+                src="../images/buttons/home.gif"
+                alt="Home"
+              />
+              <img
+                class="over"
+                src="../images/buttons/home_over.gif"
+                alt="Home"
+              />
+            </a>
+            <a href="support.html">
+              <img
+                class="default"
+                src="../images/buttons/comm_support.gif"
+                alt="Support"
+              />
+              <img
+                class="over"
+                src="../images/buttons/comm_support_over.gif"
+                alt="Support"
+              />
+            </a>
+            <a href="join.html">
+              <img
+                class="default"
+                src="../images/buttons/join_bbrm.gif"
+                alt="Join"
+              />
+              <img
+                class="over"
+                src="../images/buttons/join_bbrm_over.gif"
+                alt="Join"
+              />
+            </a>
+            <div class="gradation"></div>
+          </div>
+          <div class="graphic-mid">
+            <img class="banner-right" src="../images/graphic_mid.png" />
+            <div class="logo">
+              <img src="../images/logo_bbrm.png" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-function FP_swapImgRestore() {//v1.0
- var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
-  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } }
-  doc.$imgSwaps=null; }
-}
-// -->
+      <div class="secondary-nav">
+        <div class="secondary-links">
+          <a href="articles.html">
+            <img
+              class="default articles-link"
+              src="../images/buttons/articles.gif"
+              alt="Published Articles"
+            />
+            <img
+              class="over articles-link"
+              src="../images/buttons/articles_over.gif"
+              alt="Published Articles"
+            />
+          </a>
+          <a href="credits.html">
+            <img
+              class="default"
+              src="../images/buttons/credits.gif"
+              alt="Credits"
+            />
+            <img
+              class="over"
+              src="../images/buttons/credits_over.gif"
+              alt="Credits"
+            />
+          </a>
+          <a href="FHPS.html">
+            <img class="default" src="../images/buttons/FHPS.gif" alt="FHPS" />
+            <img
+              class="over"
+              src="../images/buttons/FHPS_over.gif"
+              alt="FHPS"
+            />
+          </a>
+          <a href="links.html">
+            <img
+              class="default"
+              src="../images/buttons/links.gif"
+              alt="Links"
+            />
+            <img
+              class="over"
+              src="../images/buttons/links_over.gif"
+              alt="Links"
+            />
+          </a>
+          <a href="mission.html">
+            <img
+              class="default"
+              src="../images/buttons/mission.gif"
+              alt="Our Mission"
+            />
+            <img
+              class="over"
+              src="../images/buttons/mission_over.gif"
+              alt="Our Mission"
+            />
+          </a>
+        </div>
+      </div>
 
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
+      <div class="nav-under">
+        <div class="under-left">
+          <img src="../images/graphic_under_left.png" />
+        </div>
+        <div class="under-right">
+          <img src="../images/graphic_under_right.png" />
+        </div>
+      </div>
+    </div>
 
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
+    <div class="page-content">
+      <table cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tbody>
+          <tr>
+            <td width="100%" height="100%" valign="top">
+              <p>
+                <strong
+                  ><span class="style1"
+                    >Young blacks encouraged to pick biomedical research</span
+                  ><br />
+                  CU scientist reveals opportunities to minority teens</strong
+                >
+              </p>
+              <p><strong>By Katy Human</strong></p>
+              <p>Camera Staff Writer</p>
+              <p>
+                DENVER - Patrick Allen compares his dream of a 'black biomedical
+                research movement" to the women's movement.
+              </p>
+              <p>
+                As increasingly emancipated women moved into the workforce, some
+                ended up in research. Many of them pursued topics with
+                particular importance to women, such as breast cancer and
+                menopause.
+              </p>
+              <p>
+                Allen, a black research professor at the University of Colorado,
+                wants to see the same thing happen for African Americans. The
+                scientist, who studies HIV viruses, believes the health
+                awareness of African Americans would improve if more black
+                students pursued biomedical research careers.
+              </p>
+              <p>
+                Monday, Allen delivered that message to about 40 students from
+                advanced science classes at Montbello High School in Denver. He
+                talked about his own experiences as a student and researcher and
+                encouraged the kids to get a college education at least, and to
+                consider the medical research profession.
+              </p>
+              <p>
+                "Knowledge is king," Allen told the, kids, promising "it gets so
+                much better later on. When you go to college, you get to decide
+                what to study, you have choices. And in graduate school, you
+                only have to study what you want."
+              </p>
+              <p>
+                Allen wanted to study biology. As an undergraduate at
+                Springfield College in Massachusetts and a graduate student at
+                the University of California at Santa Cruz, he found himself
+                increasingly drawn to molecular biology - the study of the
+                proteins and nucleic acids that make cells work.
+              </p>
+              <p>
+                Now, the CU researcher. studies the proteins and nucleic acids
+                of HIV viruses, which cause AIDS.
+              </p>
+              <p>
+                He's investigating a particular transformation that HIV viruses
+                must undergo before they become infectious. If scientists could
+                interfere with that transformation, he said, "We could stop the
+                progression of the disease."
+              </p>
+              <p>
+                Allen showed a slide of some promising experimental results.
+                "How do you know that something that works in a lab will work in
+                people?" asked sophomore Mayra Loya, 14.
+              </p>
+              <p>
+                "You don't," Allen responded. On average, it takes $400 million
+                and 10 years for a research project to become a human drug, he
+                said. After laboratory work such as his, a potential drug must
+                be tested in animals as well as in human clinical trials.
+              </p>
+              <p>
+                Amanda Comstubble, 17, a senior who plans to study biology in
+                college next year, said she was impressed with Allen's message.
+                She said she's interested in biomedical research because she
+                thinks people need better inforination about health issues.
+              </p>
+              <p>
+                "When I was in junior high, I thought you could only get HIV if
+                you were gay," she said.
+              </p>
+              <p>
+                In fact, the fastest-growing population of people infected with
+                HIV is young women between 18 and 25 who are black or Hispanic.
+                "And across America, the cancer rate is going down, except in
+                black communities," Allen said.
+              </p>
+              <p>
+                He cited several reasons for the discrepancies, including
+                mistrust of the science and research communities by many African
+                Americans. A certain skepticism is well founded, he said,
+                describing the infamous Tuskegee experiments in which black men
+                with syphilis were denied treatment.
+              </p>
+              <p>
+                He emphasized the importance of moving forward. When a student
+                asked Allen about a theory that an elite group of scientists
+                manufactured the HIV virus to kill "undesirable" people, Allen
+                refused to speculate.
+              </p>
+              <p>
+                "It doesn't matter, because a lot of people are dying now and
+                that's what I care about," he said.
+              </p>
+              <p>
+                For the past two years, Allen has been quietly recruiting his
+                professional colleagues into what he calls the "black biomedical
+                research movement." He's encouraging them to take on promising
+                young black Ph.D. students, and is even trying to persuade
+                personalities such as television, star Oprah Winfrey, Denver
+                Bronco Terrell Davis and comedian Chris Rock to promote black
+                health consciousness and encourage young minorities to pursue
+                research careers.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
+    <script>
+      // Open mobile navigation overlay
+      const openNav = () => {
+        $("#nav-open").hide();
+        $("#nav-close").show();
+        $("#mobile-overlay").css("display", "flex");
+        $("#nav-logo").show();
+        $("body").css("overflow-y", "hidden");
+      };
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
-</script>
+      // Close navigation overlay
+      const closeNav = () => {
+        $("#nav-open").show();
+        $("#nav-close").hide();
+        $("#mobile-overlay").hide();
+        $("#nav-logo").hide();
+        $("body").css("overflow-y", "auto");
+      };
 
-<style type="text/css">
-<!--
-.style1 {font-size: 18px}
--->
-</style>
-
-<style type="text/css">
-<!--
-.style1 {
-	font-size: 18px;
-	font-weight: bold;
-}
--->
-</style>
-</head><body onLoad="FP_preloadImgs('images/btn_home_over.gif', 'images/btn_comm_support_over.gif', 'images/btn_join_bbrm_over.gif', 'images/btn_articles_over.gif', 'images/btn_credits.gif', 'images/btn_FHPS_over.gif', 'images/btn_links_over.gif', 'images/btn_mission_over.gif', 'images/btn_credits_over.gif')" topmargin="0" leftmargin="0">
-
-
-	  
-		<table id="table2" cellpadding="0" cellspacing="0" height="718" width="100%">
-			<!-- MSTableType="layout" --><tbody><tr>
-				<td rowspan="3" bgcolor="#ffffff" valign="top">
-				<img src="../images/graphic_corner.gif" border="0" height="140" width="267"></td>
-				<td colspan="2" background="../images/red_gradation.gif" height="29" valign="top"><a href="../index.html"><img border="0" src="../images/btn_home.gif" width="66" height="29" id="img1" onMouseOver="FP_swapImg(1,0,/*id*/'img1','../images/btn_home_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../support.html"><img border="0" src="../images/btn_comm_support.gif"  id="img2" onMouseOver="FP_swapImg(1,0,/*id*/'img2','../images/btn_comm_support_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../join.html"><img border="0" src="../images/btn_join_bbrm.gif" width="83" height="29" id="img3" onMouseOver="FP_swapImg(1,0,/*id*/'img3','../images/btn_join_bbrm_over.gif')" onMouseOut="FP_swapImgRestore()"></a><img border="0" src="../images/red_gradation.gif" width="31" height="29"></td>
-			</tr>
-			<tr>
-				<td height="1"></td>
-				<td rowspan="2" bordercolor="#FFFFFF" align="right" bgcolor="#ffffff" valign="top">
-				<img src="../images/logo_bbrm.jpg" border="0" height="104" width="133"></td>
-			</tr>
-			<tr>
-				<td bordercolor="#FFFFFF" bgcolor="#ffffff" height="110" valign="top">
-				<img src="../images/graphic_mid_logotype.gif" border="0" height="110" width="384"></td>
-			</tr>
-			<tr>
-				<td colspan="3" background="../images/green_gradation.gif" height="18" valign="top"><a href="../articles.html"><img src="../images/btn_articles.gif" name="img4" width="160" height="18" border="0" id="img4" onMouseOver="FP_swapImg(1,1,/*id*/'img4','../images/btn_articles_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../credits.html"><img src="../images/btn_credits.gif" name="img5" width="66" height="18" border="0" id="img5" onMouseOver="FP_swapImg(1,1,/*id*/'img5','../images/btn_credits_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../FHPS.html"><img src="../images/btn_FHPS.gif" name="img6" width="47" height="18" border="0" id="img6" onMouseOver="FP_swapImg(1,1,/*id*/'img6','../images/btn_FHPS_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../links.html"><img src="../images/btn_links.gif" name="img7" width="47" height="18" border="0" id="img7" onMouseOver="FP_swapImg(1,1,/*id*/'img7','../images/btn_links_over.gif')" onMouseOut="FP_swapImgRestore()"></a><a href="../mission.html"><img src="../images/btn_mission.gif" name="img8" width="92" height="18" border="0" id="img8" onMouseOver="FP_swapImg(1,1,/*id*/'img8','../images/btn_mission_over.gif')" onMouseOut="FP_swapImgRestore()"></a></td>
-			</tr>
-			<tr>
-				<td valign="top">
-				<img src="../images/graphic_feat_all_white.gif" border="0" height="72" width="267"></td>
-				<td height="73" valign="top">
-				<img src="../images/graphic_under_curve.gif" border="0" height="54" width="405"></td>
-				<td rowspan="2" valign="top"><!-- MSCellType="empty" -->&nbsp;</td>
-			</tr>
-			
-			<tr>
-			  <td valign="top">&nbsp;			    </td>
-				<td height="444" valign="top">
-				<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
-					<!-- MSCellFormattingTableID="2" -->
-					<tbody><tr>
-						<td width="100%" height="100%" valign="top"><!-- MSCellFormattingType="content" -->                        <!-- InstanceBeginEditable name="EditRegion3" -->
-						  <p><strong><span class="style1">Young blacks encouraged to pick biomedical research</span><br>
-					      CU scientist reveals opportunities to minority teens</strong></p>
-						  <p><strong>By Katy Human</strong></p>
-						  <p>Camera Staff Writer</p>
-						  <p>DENVER - Patrick Allen compares his dream of a 'black biomedical research movement" to the women's movement.</p>
-						  <p>As increasingly emancipated women moved into the  workforce, some ended up in research. Many of them pursued topics with  particular importance to women, such as breast cancer and menopause.</p>
-						  <p>Allen, a black research professor at the  University of Colorado, wants to see the same thing happen for African  Americans. The scientist, who studies HIV viruses, believes the health  awareness of African Americans would improve if more black students  pursued biomedical research careers.</p>
-						  <p>Monday, Allen delivered that message to about 40  students from advanced science classes at Montbello High School in  Denver. He talked about his own experiences as a student and researcher  and encouraged the kids to get a college education at least, and to  consider the medical research profession.</p>
-						  <p>"Knowledge is king," Allen told the, kids,  promising "it gets so much better later on. When you go to college, you  get to decide what to study, you have choices. And in graduate school,  you only have to study what you want."</p>
-						  <p>Allen wanted to study biology. As an  undergraduate at Springfield College in Massachusetts and a graduate  student at the University of California at Santa Cruz, he found himself  increasingly drawn to molecular biology - the study of the proteins and  nucleic acids that make cells work.</p>
-						  <p>Now, the CU researcher. studies the proteins and nucleic acids of HIV viruses, which cause AIDS.</p>
-						  <p>He's investigating a particular transformation  that HIV viruses must undergo before they become infectious. If  scientists could interfere with that transformation, he said, "We could  stop the progression of the disease."</p>
-						  <p>Allen showed a slide of some promising experimental results.   "How do you know that something that works in a lab will work in people?" asked sophomore Mayra Loya, 14.</p>
-						  <p>"You don't," Allen responded. On average, it  takes $400 million and 10 years for a research project to become a  human drug, he said. After laboratory work such as his, a potential  drug must be tested in animals as well as in human clinical trials.</p>
-						  <p>Amanda Comstubble, 17, a senior who plans to  study biology in college next year, said she was impressed with Allen's  message. She said she's interested in biomedical research because she  thinks people need better inforination about health issues.</p>
-						  <p>"When I was in junior high, I thought you could only get HIV if you were gay," she said.</p>
-						  <p>In fact, the fastest-growing population of  people infected with HIV is young women between 18 and 25 who are black  or Hispanic. "And across America, the cancer rate is going down, except  in black communities," Allen said.</p>
-						  <p>He cited several reasons for the discrepancies,  including mistrust of the science and research communities by many  African Americans. A certain skepticism is well founded, he said,  describing the infamous Tuskegee experiments in which black men with  syphilis were denied treatment.</p>
-						  <p>He emphasized the importance of moving forward.  When a student asked Allen about a theory that an elite group of  scientists manufactured the HIV virus to kill "undesirable" people,  Allen refused to speculate.</p>
-						  <p>"It doesn't matter, because a lot of people are dying now and that's what I care about," he said.</p>
-						  <p>For the past two years, Allen has been quietly  recruiting his professional colleagues into what he calls the "black  biomedical research movement." He's encouraging them to take on  promising young black Ph.D. students, and is even trying to persuade  personalities such as television, star Oprah Winfrey, Denver Bronco  Terrell Davis and comedian Chris Rock to promote black health  consciousness and encourage young minorities to pursue research careers.</p>
-						</td>
-					</tr>
-				</tbody></table>				</td>
-			</tr>
-		</tbody></table>
-  
-	</body>
+      // Set up navigation onclicks
+      $("#nav-open").click(openNav);
+      $("#nav-close").click(closeNav);
+    </script>
+  </body>
 </html>
