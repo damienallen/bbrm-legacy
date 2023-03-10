@@ -189,6 +189,11 @@ a:active {
   margin-bottom: 32px;
 }
 
+.fhps-logo img {
+  width: 100%;
+  max-width: 395px;
+}
+
 .fhps a:link,
 .fhps a:visited,
 .fhps a:hover,
@@ -239,14 +244,25 @@ a:active {
 
 .form-control {
   flex: 0 1 220px;
+  text-align: right;
 }
 
 .form-input {
   width: 204px;
 }
 
+.form-textarea {
+  width: 204px;
+  height: 100px;
+}
+
 .form-select {
   width: 212px;
+}
+
+.sex {
+  display: inline-block;
+  margin: 0 32px 0 4px;
 }
 
 .submit-button {
@@ -262,12 +278,6 @@ a:active {
   margin: 32px auto 64px auto;
   max-width: 100%;
   width: 70ch;
-}
-
-@media (max-width: 768px) {
-  .page-content {
-    margin: 64px 48px;
-  }
 }
 
 .page-content ol {
@@ -403,4 +413,57 @@ section {
 
 .nav-under {
   display: flex;
+}
+
+/* Mobile site */
+@media (max-width: 768px) {
+  .page-content {
+    margin: 0;
+    padding: 0 16px;
+    width: inherit;
+  }
+
+  .page-content ul {
+    padding-left: 0;
+  }
+
+  .fhps-text ul,
+  section ul {
+    padding-left: 32px !important;
+  }
+
+  .movement {
+    width: auto;
+  }
+
+  .form-input {
+    width: 160px;
+  }
+
+  .form-select {
+    width: 168px;
+  }
+
+  .form-textarea {
+    width: 160px;
+    height: 64px;
+  }
+
+  .form-control {
+    flex: 0 1 200px;
+  }
+
+  .label {
+    flex: 0 0 40vw;
+    padding-right: 8px;
+  }
+
+  .sex {
+    display: inline-block;
+    margin: 0 4px;
+  }
+
+  .support {
+    margin-top: 32px;
+  }
 }
