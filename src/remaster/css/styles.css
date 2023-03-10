@@ -119,11 +119,10 @@ a:active {
 
 .promo-video {
   margin: 64px auto;
-  width: fit-content;
 }
 
 .promo-video video {
-  object-fit: initial;
+  width: 640px;
 }
 
 .caption {
