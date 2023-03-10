@@ -422,6 +422,7 @@ section {
 
 #mobile-overlay {
   display: none;
+  flex-direction: column;
   background: #fff;
   position: sticky;
   top: 0;
@@ -441,14 +442,21 @@ section {
   z-index: 5;
 }
 
+#nav-logo {
+  padding-top: 16px;
+  display: none;
+  text-align: center;
+  flex: 0 1 140px;
+}
+
 #nav-close {
   display: none;
 }
 
 .mobile-nav {
-  height: 80vh;
+  flex: 1;
   margin: 0 auto;
-  padding: 10vh 0;
+  padding-bottom: 32px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -460,10 +468,11 @@ section {
 .mobile-nav a:visited,
 .mobile-nav a:hover {
   font-family: "Helvetica", sans-serif;
-  color: #086b08;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  color: #086b08;
   display: block;
 }
 
@@ -473,8 +482,60 @@ section {
     display: none;
   }
 
+  .primary-nav {
+    display: flex;
+    align-items: flex-end;
+    width: 100vw;
+    max-width: 651px;
+  }
+
+  .banner-left {
+    height: fit-content;
+    flex: 0.4101;
+  }
+
+  .nav-fill {
+    flex: 0.5899;
+    margin-right: 16px;
+  }
+
+  .banner-left img,
+  .under-right img,
+  .graphic-mid img,
+  .graphic-mid {
+    height: auto;
+    width: 100%;
+  }
+
+  .nav-under {
+    display: flex;
+    width: 100vw;
+    max-width: 672px;
+  }
+
+  .under-left {
+    flex: 0.3974;
+  }
+
+  .under-right {
+    flex: 0.6026;
+    margin-right: 16px;
+  }
+
+  .under-left img,
+  .under-right img {
+    width: 100%;
+  }
+
   #nav-open {
     display: block;
+  }
+
+  .logo {
+    display: none;
+    position: absolute;
+    top: 64px;
+    z-index: 6;
   }
 
   .page-content {
@@ -494,6 +555,10 @@ section {
   .home-container {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .home-subtitle {
+    padding: 0 16px;
   }
 
   .main {

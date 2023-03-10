@@ -55,6 +55,29 @@
   </head>
 
   <body>
+    <div id="mobile-overlay">
+      <div id="nav-logo">
+        <img src="images/logo_bbrm.png" />
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="join.html">Join</a>
+        <a href="articles.html">Published Articles</a>
+        <a href="credits.html">Credits</a>
+        <a href="FHPS.html">FHPS</a>
+        <a href="links.html">Links</a>
+        <a href="mission.html">Our Mission</a>
+      </div>
+    </div>
+
+    <div id="nav-open">
+      <img src="images/buttons/menu.svg" width="32" height="32" />
+    </div>
+    <div id="nav-close">
+      <img src="images/buttons/close.svg" width="32" height="32" />
+    </div>
+
     <div class="nav">
       <div class="primary-nav">
         <div class="banner-left">
@@ -396,5 +419,29 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      // Open mobile navigation overlay
+      const openNav = () => {
+        $("#nav-open").hide();
+        $("#nav-close").show();
+        $("#mobile-overlay").css("display", "flex");
+        $("#nav-logo").show();
+        $("body").css("overflow", "hidden");
+      };
+
+      // Close navigation overlay
+      const closeNav = () => {
+        $("#nav-open").show();
+        $("#nav-close").hide();
+        $("#mobile-overlay").hide();
+        $("#nav-logo").hide();
+        $("body").css("overflow", "auto");
+      };
+
+      // Set up navigation onclicks
+      $("#nav-open").click(openNav);
+      $("#nav-close").click(closeNav);
+    </script>
   </body>
 </html>

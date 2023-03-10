@@ -61,6 +61,9 @@
 
   <body>
     <div id="mobile-overlay">
+      <div id="nav-logo">
+        <img src="images/logo_bbrm.png" />
+      </div>
       <div class="mobile-nav">
         <a href="index.html">Home</a>
         <a href="support.html">Support</a>
@@ -74,10 +77,10 @@
     </div>
 
     <div id="nav-open">
-      <img src="images/buttons/menu.svg" width="24" height="24" />
+      <img src="images/buttons/menu.svg" width="32" height="32" />
     </div>
     <div id="nav-close">
-      <img src="images/buttons/close.svg" width="24" height="24" />
+      <img src="images/buttons/close.svg" width="32" height="32" />
     </div>
 
     <div class="nav">
@@ -458,7 +461,9 @@
       const openNav = () => {
         $("#nav-open").hide();
         $("#nav-close").show();
-        $("#mobile-overlay").show();
+        $("#mobile-overlay").css("display", "flex");
+        $("#nav-logo").show();
+        $("body").css("overflow", "hidden");
       };
 
       // Close navigation overlay
@@ -466,6 +471,8 @@
         $("#nav-open").show();
         $("#nav-close").hide();
         $("#mobile-overlay").hide();
+        $("#nav-logo").hide();
+        $("body").css("overflow", "auto");
       };
 
       // Set up navigation onclicks
