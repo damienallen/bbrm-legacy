@@ -122,6 +122,10 @@ a:active {
   width: fit-content;
 }
 
+.promo-video video {
+  object-fit: initial;
+}
+
 .caption {
   margin: 8px 0;
   color: #666;
@@ -587,7 +591,6 @@ section {
 
   .promo-video video {
     width: 100vw;
-    object-fit: initial;
   }
 
   .sl-counter {
