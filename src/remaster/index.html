@@ -44,6 +44,7 @@
       src="https://stats.dallen.dev/js/script.js"
     ></script>
 
+    <script type="text/javascript" src="js/simple-lightbox.js"></script>
     <script type="text/javascript" src="js/motion-gallery.js">
       /***********************************************
       * CMotion Image Gallery - Dynamic Drive DHTML code library
@@ -51,8 +52,6 @@
       * This notice must stay intact for legal use
       ***********************************************/
     </script>
-
-    <script type="text/javascript" src="js/simple-lightbox.js"></script>
   </head>
 
   <body>
@@ -421,7 +420,18 @@
     </div>
 
     <script>
-      const gallery = new SimpleLightbox(".gallery a");
+      const gallery = new SimpleLightbox(".gallery a", {
+        animationSpeed: 100,
+        animationSlide: false,
+        captionPosition: "outside",
+        captionDelay: 200,
+        overlayOpacity: 0.7,
+        fadeSpeed: 150,
+        navText: [
+          '<img src="images/buttons/prev_label.gif" />',
+          '<img src="images/buttons/next_label.gif" />',
+        ],
+      });
       gallery.on("error.simplelightbox", function (e) {
         console.log(e);
       });
