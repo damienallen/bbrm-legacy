@@ -587,6 +587,7 @@ section {
 
   .promo-video video {
     width: 100vw;
+    object-fit: initial;
   }
 
   .sl-counter {
