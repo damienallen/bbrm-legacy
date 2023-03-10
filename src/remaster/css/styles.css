@@ -325,6 +325,10 @@ section {
   margin-bottom: 32px;
 }
 
+#motion-container a:hover img {
+  border: 4px solid #999;
+}
+
 /* Navigation */
 .nav {
   position: relative;

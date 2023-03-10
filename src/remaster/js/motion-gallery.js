@@ -126,13 +126,13 @@ function stopmotion(e) {
 function fillup() {
   if (iedom) {
     crossmain = document.getElementById
-      ? document.getElementById("motioncontainer")
-      : document.all.motioncontainer;
+      ? document.getElementById("motion-container")
+      : document.all.motion - container;
     menuwidth = parseInt(crossmain.style.width);
     mainobjoffset = getposOffset(crossmain, "left");
     cross_scroll_0 = document.getElementById
-      ? document.getElementById("motiongallery")
-      : document.all.motiongallery;
+      ? document.getElementById("motion-gallery")
+      : document.all.motion - gallery;
     cross_scroll_1 = document.createElement("div");
     cross_scroll_1.style.position = "absolute";
     cross_scroll_1.style.whiteSpace = "nowrap";
