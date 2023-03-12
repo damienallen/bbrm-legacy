@@ -846,14 +846,18 @@ section {
     text-align: center;
   }
 
-  .sl-prev {
+  .sl-prev,
+  .sl-next {
+    width: fit-content !important;
     margin-top: 30vh !important;
+  }
+
+  .sl-prev {
     margin-left: -8px !important;
   }
 
   .sl-next {
-    margin-top: 30vh !important;
-    margin-right: 32px !important;
+    margin-right: -8px !important;
   }
 
   .sticky {
