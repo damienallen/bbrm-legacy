@@ -158,9 +158,9 @@ article .subtitle {
   font-size: 1.1em;
 }
 
-article .source {
-  margin-top: 8px;
+.source {
   color: #666;
+  margin-top: 8px;
 }
 
 article .date {
@@ -301,15 +301,16 @@ article .excerpt {
   list-style: none;
 }
 
-.articles-list .writer-title {
-  margin-top: 8px;
+.articles-list .writer {
+  margin-bottom: 8px;
 }
 
-.byline {
-  margin-top: 4px;
+.headline {
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
 }
 
-.articlebody {
+.article-snippet {
   margin: 16px 0;
 }
 
