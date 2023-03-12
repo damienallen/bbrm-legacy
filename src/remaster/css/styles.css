@@ -630,11 +630,11 @@ section {
   justify-content: space-between;
 }
 
-.logo {
-  margin: 16px 32px;
+.nav .logo {
+  margin: 16px 20px;
 }
 
-.logo img {
+.nav .logo img {
   height: 75px;
 }
 
@@ -854,6 +854,12 @@ section {
   .sl-next {
     margin-top: 30vh !important;
     margin-right: 32px !important;
+  }
+
+  .sl-close {
+    top: 32px !important;
+    left: auto !important;
+    right: 32px !important;
   }
 
   .sticky {
