@@ -303,6 +303,25 @@ a:active {
   margin-top: 32px;
 }
 
+/* 404 */
+.not-found {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.not-found div {
+  flex: 0 1;
+  margin: 16px 0;
+}
+
 /* General */
 .page-content {
   font-size: 18px;
