@@ -281,6 +281,16 @@ article .excerpt {
   margin: 16px 0;
 }
 
+.highlight {
+  margin: 48px 0 32px 16px;
+  width: 240px;
+  font-size: 2em;
+  line-height: 1.8em;
+  text-align: center;
+  float: right;
+  color: #666;
+}
+
 /* Articles overview page */
 .articles-list ul {
   margin: 32px 0;
