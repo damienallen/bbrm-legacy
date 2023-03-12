@@ -142,7 +142,28 @@ a:active {
   white-space: nowrap;
 }
 
-/* Articles page */
+/* Articles */
+.article {
+}
+
+.article .title {
+}
+
+.article .summary {
+}
+
+.article .date {
+}
+
+.writer {
+}
+
+.writer-title {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Articles overview page */
 .articles-list ul {
   margin: 32px 0;
 }
@@ -152,10 +173,8 @@ a:active {
   list-style: none;
 }
 
-.writer-title {
+.articles-list .writer-title {
   margin-top: 8px;
-  font-style: italic;
-  font-size: 0.9em;
 }
 
 .byline {
