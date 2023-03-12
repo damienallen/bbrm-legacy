@@ -3,6 +3,12 @@
   <head>
     <title>BBRM</title>
 
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline' 'unsafe-eval' stats.dallen.dev code.jquery.com"
+    />
+    <meta http-equiv="Content-Security-Policy" content="media-src 'self'" />
+
     <meta name="color-scheme" content="light only" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-title" content="BBRM" />
@@ -440,15 +446,9 @@
           </p>
 
           <div class="promo-video">
-            <video controls playsinline>
-              <source
-                src="https://sites.dallen.dev/bbrm/bbrm_promo.webm"
-                type="video/webm"
-              />
-              <source
-                src="https://sites.dallen.dev/bbrm/bbrm_promo.mp4"
-                type="video/mp4"
-              />
+            <video preload="auto" controls playsinline>
+              <source src="/media/bbrm_promo.webm" type="video/webm" />
+              <source src="/media/bbrm_promo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div class="caption">

@@ -24,6 +24,10 @@ a:active {
   margin-left: 234px;
 }
 
+.home-container {
+  overflow-y: clip;
+}
+
 .home-title {
   font-size: 1.4em !important;
 }
@@ -127,6 +131,7 @@ a:active {
 
 .promo-video video {
   width: 640px;
+  border-radius: 8px;
 }
 
 .caption {
@@ -574,7 +579,7 @@ section {
 
 .secondary-nav {
   box-shadow: inset 0px 2px 0px 0px #000;
-  height: 16px;
+  height: 18px;
   background: #086b08;
   display: flex;
 }
@@ -745,6 +750,7 @@ section {
 
   .promo-video video {
     width: 100vw;
+    border-radius: 0;
   }
 
   .sl-counter {
