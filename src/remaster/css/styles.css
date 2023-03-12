@@ -43,7 +43,7 @@ a:active {
 }
 
 .sidebar-container {
-  background: url(../images/featured_background.png) repeat-y;
+  background: url(/images/featured_background.png) repeat-y;
   margin-top: -64px;
   padding-bottom: 64px;
   height: 100vh;
@@ -60,7 +60,7 @@ a:active {
 }
 
 .featured-header {
-  background: url(../images/featured_dna.png) no-repeat;
+  background: url(/images/featured_dna.png) no-repeat;
   height: 46px;
   margin: 64px 0 16px 8px;
   padding: 10px 0 0 80px;
@@ -406,7 +406,7 @@ section {
 }
 
 .gradation {
-  background: url(../images/red_gradation.gif) repeat-x;
+  background: url(/images/red_gradation.gif) repeat-x;
   flex: 1;
 }
 
