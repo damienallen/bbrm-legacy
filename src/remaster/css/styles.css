@@ -148,25 +148,132 @@ article .title {
   font-size: 1.4em;
   font-weight: bold;
 }
+article .subtitle {
+  margin-top: 8px;
+  font-size: 1.1em;
+}
 
-article .summary {
+article .source {
   margin-top: 8px;
   color: #666;
 }
 
 article .date {
-  margin-top: 32px;
-  font-size: 0.9em;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 8px;
   text-transform: uppercase;
+  color: #666;
 }
 
 article .writer {
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
-.writer-title {
+article .footer {
+  margin: 48px 16px;
+  border-left: 2px solid #999;
+  padding-left: 16px;
+}
+
+article .writer-title {
   font-style: italic;
-  font-size: 0.9em;
+}
+
+article p {
+  margin: 16px 0;
+}
+
+article .excerpt {
+  margin: 32px 48px;
+  color: #333;
+  text-align: center;
+}
+
+.profile {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+}
+
+.profile div {
+  flex: 1;
+}
+
+.rounded img,
+.profile img {
+  border-radius: 8px;
+}
+
+.profile-text {
+  line-height: 2.4em;
+}
+
+.image-left {
+  float: left;
+  margin: 16px 48px 32px 0;
+}
+
+.image-center {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.image-right {
+  float: right;
+  margin: 16px 0 32px 48px;
+}
+
+.magazine {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 471px;
+  width: 80vw;
+  line-height: 0;
+  border-radius: 8px;
+  margin: 32px 0 64px 0;
+}
+
+.magazine img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.statement {
+  margin-top: 64px;
+  text-align: center;
+  font-style: italic;
+}
+
+.facts {
+  float: left;
+  width: 200px;
+  background: #999;
+  color: #fff;
+  padding: 0 32px 0 48px;
+  margin: 16px 32px 32px 0;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.facts ul {
+  padding: 0;
+  margin: 0;
+}
+
+.facts li {
+  padding: 16px 0;
+}
+
+.facts h3 {
+  font-family: "Helvetica", sans-serif;
+  text-align: center;
+}
+
+.facts div {
+  text-align: center;
+  margin: 16px 0;
 }
 
 /* Articles overview page */
