@@ -15,6 +15,10 @@ a:active {
   text-decoration: underline;
 }
 
+:root {
+  color-scheme: only light;
+}
+
 /* Home page */
 .home-content {
   margin-left: 234px;
