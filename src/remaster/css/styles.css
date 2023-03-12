@@ -143,19 +143,25 @@ a:active {
 }
 
 /* Articles */
-.article {
+
+article .title {
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
-.article .title {
+article .summary {
+  margin-top: 8px;
+  color: #666;
 }
 
-.article .summary {
+article .date {
+  margin-top: 32px;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
-.article .date {
-}
-
-.writer {
+article .writer {
+  margin-top: 16px;
 }
 
 .writer-title {
