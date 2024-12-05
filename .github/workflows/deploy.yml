@@ -24,4 +24,4 @@ jobs:
       - name: Sync Static Files
         run: |
           rsync -avz --delete --exclude .git/ --exclude .github/ --exclude .gitignore --exclude README.md \
-          -e "ssh -p ${{ secrets.SSH_PORT }}" ./src/remaster ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/bbrm-legacy
+          -e "ssh -p ${{ secrets.SSH_PORT }}" ./src/remaster/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/bbrm-legacy
